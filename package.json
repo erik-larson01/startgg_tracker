@@ -1,0 +1,15 @@
+{
+  "name": "startgg_tracker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Tournament scraper and data compiler for StartGG",
+  "dependencies": {
+    "dotenv": "^16.5.0"
+  }
+}
