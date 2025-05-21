@@ -5,3 +5,4 @@ config/tournaments.json
 /data/rawSets.json
 /data/userIdMap.json
 /data/results.json
+/data/eventIds.json
