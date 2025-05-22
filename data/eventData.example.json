@@ -1,12 +1,14 @@
 [
   {
+    "tournament": "Riptide 2023",
+    "event": "Ultimate Singles",
     "id": 857901,
-    "name": "Ultimate Singles",
     "slug": "tournament/riptide-2023-4/event/ultimate-singles"
   },
   {
+    "tournament": "Riptide 2024",
+    "event": "Ultimate Singles",
     "id": 1068595,
-    "name": "Ultimate Singles",
     "slug": "tournament/riptide-2024-5/event/ultimate-singles"
   }
 ]
