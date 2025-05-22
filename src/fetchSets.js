@@ -68,7 +68,7 @@ async function fetchAllSetsForEvent(id, perPage) {
   return { totalSets, sets: allSets };
 }
 
-async function fetchSets() {
+export async function fetchSets() {
   let combinedSets = [];
   let totalSetsAcrossAll = 0;
 

@@ -1,4 +1,12 @@
 import { config } from "dotenv";
 config();
 
-const key = process.env.STARTGG_API_KEY;
+import { fetchEvents } from "./src/fetchEvents.js";
+import {fetchSets} from "./src.fetchSets.js";
+
+async function main () {
+    await fetchEvents();
+    await fetchSets();
+}
+
+main();
