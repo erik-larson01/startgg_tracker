@@ -1,13 +1,15 @@
 import fs from "fs";
 import path from "path";
+import { config } from "dotenv";
+config();
 
 const key = process.env.STARTGG_API_KEY;
-const eventPath = path.join(process.cwd(), "data", "eventData.example.json");
+const eventPath = path.join(process.cwd(), "data", "eventData.json");
 const eventData = JSON.parse(fs.readFileSync(eventPath, "utf-8"));
 const eventIds = eventData.map((event) => event.id);
 const tournamentNames = eventData.map((event) => event.tournament);
 const eventNames = eventData.map((event) => event.event);
-const outputPath = path.join(process.cwd(), "data", "rawSets.example.json");
+const outputPath = path.join(process.cwd(), "data", "rawSets.json");
 let perPage = 100;
 
 const query = `query EventSets($eventId: ID!, $page: Int!, $perPage: Int!) {
