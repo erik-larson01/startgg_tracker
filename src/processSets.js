@@ -27,7 +27,10 @@ function getUserIds(trackedPlayers, allSlots) {
             }
         }
     }
+    console.log(`Player-ID Map Complete. ${playerMap.size} players logged.`)
     return playerMap;
 }
 
-const playerMap = getUserIds(trackedPlayers, allSlots);
+export function processSets() {
+    const playerMap = getUserIds(trackedPlayers, allSlots);
+}

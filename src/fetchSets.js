@@ -1,15 +1,16 @@
 import fs from "fs";
 import path from "path";
+import cliProgress from 'cli-progress';
 import { config } from "dotenv";
 config();
 
 const key = process.env.STARTGG_API_KEY;
-const eventPath = path.join(process.cwd(), "data", "eventData.json");
+const eventPath = path.join(process.cwd(), "data", "eventData.example.json");
 const eventData = JSON.parse(fs.readFileSync(eventPath, "utf-8"));
 const eventIds = eventData.map((event) => event.id);
 const tournamentNames = eventData.map((event) => event.tournament);
 const eventNames = eventData.map((event) => event.event);
-const outputPath = path.join(process.cwd(), "data", "rawSets.json");
+const outputPath = path.join(process.cwd(), "data", "rawSets.example.json");
 let perPage = 100;
 
 const query = `query EventSets($eventId: ID!, $page: Int!, $perPage: Int!) {
@@ -40,7 +41,35 @@ const query = `query EventSets($eventId: ID!, $page: Int!, $perPage: Int!) {
   }
 }`;
 
-async function fetchAllSetsForEvent(id, perPage) {
+async function getTotalSetsForAllEvents() {
+  let total = 0;
+
+  for (let i = 0; i < eventIds.length; i++) {
+    const response = await fetch("https://api.start.gg/gql/alpha", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${key}`,
+      },
+      body: JSON.stringify({
+        query,
+        variables: {
+          eventId: eventIds[i],
+          page: 1,
+          perPage: 1, // Just need to get pageInfo
+        },
+      }),
+    });
+
+    const data = await response.json();
+    const setsInfo = data.data.event.sets.pageInfo;
+    total += setsInfo.total;
+  }
+
+  return total;
+}
+
+async function fetchAllSetsForEvent(id, perPage, progressBar) {
   let allSets = [];
   let page = 1;
   let totalPages = 1;
@@ -64,6 +93,9 @@ async function fetchAllSetsForEvent(id, perPage) {
     totalSets = sets.pageInfo.total;
     allSets.push(...sets.nodes);
 
+    if (progressBar) {
+      progressBar.increment(sets.nodes.length);
+    }
     page++;
   } while (page <= totalPages);
 
@@ -72,18 +104,32 @@ async function fetchAllSetsForEvent(id, perPage) {
 
 export async function fetchSets() {
   let combinedSets = [];
-  let totalSetsAcrossAll = 0;
+  let totalSetsAcrossAll = await getTotalSetsForAllEvents();
+  let barEnable = false;
+
+  const progressBar = new cliProgress.SingleBar({
+    format: 'Fetching Sets |{bar}| {percentage}% || {value}/{total} Sets',
+    barCompleteChar: '\u2588',
+    barIncompleteChar: '\u2591',
+    hideCursor: true
+  }, cliProgress.Presets.shades_classic);
+
 
   for (let i = 0; i < eventIds.length; i++) {
     console.log(
-      `Fetching set data for tournament with name: ${tournamentNames[i]} and event: ${eventNames[i]}...`
-    );
-    const { totalSets, sets: allSets } = await fetchAllSetsForEvent(
-      eventIds[i],
-      perPage
+      `\nFetching set data for tournament with name: ${tournamentNames[i]} and event: ${eventNames[i]}...`
     );
 
-    totalSetsAcrossAll += totalSets;
+    if (!barEnable) {
+    progressBar.start(totalSetsAcrossAll, 0);
+    barEnable = true;
+  }
+    const { totalSets, sets: allSets } = await fetchAllSetsForEvent(
+      eventIds[i],
+      perPage,
+      progressBar
+    );
+
 
     combinedSets.push({
       tournament: tournamentNames[i],
@@ -93,11 +139,14 @@ export async function fetchSets() {
       sets: allSets,
     });
   }
+
+  console.log();
+  console.log("All sets successfully fetched and saved to rawSets.json");
+
   const finalOutput = {
     totalSets: totalSetsAcrossAll,
     tournaments: combinedSets,
   };
 
   fs.writeFileSync(outputPath, JSON.stringify(finalOutput, null, 2));
-  console.log("All sets successfully written to rawSets.json");
 }
