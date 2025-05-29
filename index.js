@@ -3,6 +3,7 @@ config();
 
 import { fetchEvents } from "./src/fetchEvents.js";
 import {fetchSets} from "./src/fetchSets.js";
+import { fetchStandings } from "./src/fetchStandings.js";
 import { processSets } from "./src/processSets.js";
 
 
@@ -11,6 +12,8 @@ async function main () {
     console.log();
     console.log("Fetching event data for all tournaments...");
     await fetchEvents();
+    console.log("Fetching standing data for all tournaments...");
+    await fetchStandings();
     await fetchSets();
     console.log("\nProcessing sets in rawSets.json...")
     await processSets();

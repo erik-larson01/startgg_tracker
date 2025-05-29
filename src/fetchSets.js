@@ -57,7 +57,7 @@ async function getTotalSetsForAllEvents() {
         variables: {
           eventId: eventIds[i],
           page: 1,
-          perPage: 1, // Just need to get pageInfo
+          perPage: 1,
         },
       }),
     });
@@ -144,7 +144,7 @@ export async function fetchSets() {
 
   progressBar.stop();
   console.log();
-  console.log("All sets successfully fetched and saved to rawSets.json");
+  console.log(`All sets successfully fetched and saved to rawSets.json`);
 
   const finalOutput = {
     totalSets: totalSetsAcrossAll,

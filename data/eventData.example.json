@@ -2,12 +2,14 @@
   {
     "tournament": "Riptide 2023",
     "event": "Ultimate Singles",
+    "entrants": 717,
     "id": 857901,
     "slug": "tournament/riptide-2023-4/event/ultimate-singles"
   },
   {
     "tournament": "Riptide 2024",
     "event": "Ultimate Singles",
+    "entrants": 1024,
     "id": 1068595,
     "slug": "tournament/riptide-2024-5/event/ultimate-singles"
   }

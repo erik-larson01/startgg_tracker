@@ -13,6 +13,7 @@ const query = `query getEventId($slug: String) {
   event(slug: $slug) {
     id
     name
+    numEntrants
     tournament {
       name
     }
@@ -46,6 +47,7 @@ async function fetchId(slug) {
       allEvents.push({
         tournament: event.tournament.name,
         event: event.name,
+        entrants: event.numEntrants,
         id: event.id,
         slug: slug,
       });
