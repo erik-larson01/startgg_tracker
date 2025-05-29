@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import cliProgress from 'cli-progress';
+import cliProgress from "cli-progress";
 import { config } from "dotenv";
 config();
 
@@ -25,14 +25,15 @@ const query = `query EventSets($eventId: ID!, $page: Int!, $perPage: Int!) {
       nodes {
         id
         winnerId
-        displayScore
         slots {
           entrant {
             id
             name
             participants {
-              id
               gamerTag
+              user {
+                id
+              }
             }
           }
         }
@@ -107,13 +108,15 @@ export async function fetchSets() {
   let totalSetsAcrossAll = await getTotalSetsForAllEvents();
   let barEnable = false;
 
-  const progressBar = new cliProgress.SingleBar({
-    format: 'Fetching Sets |{bar}| {percentage}% || {value}/{total} Sets',
-    barCompleteChar: '\u2588',
-    barIncompleteChar: '\u2591',
-    hideCursor: true
-  }, cliProgress.Presets.shades_classic);
-
+  const progressBar = new cliProgress.SingleBar(
+    {
+      format: "Fetching Sets |{bar}| {percentage}% || {value}/{total} Sets",
+      barCompleteChar: "\u2588",
+      barIncompleteChar: "\u2591",
+      hideCursor: true,
+    },
+    cliProgress.Presets.shades_classic
+  );
 
   for (let i = 0; i < eventIds.length; i++) {
     console.log(
@@ -121,15 +124,14 @@ export async function fetchSets() {
     );
 
     if (!barEnable) {
-    progressBar.start(totalSetsAcrossAll, 0);
-    barEnable = true;
-  }
+      progressBar.start(totalSetsAcrossAll, 0);
+      barEnable = true;
+    }
     const { totalSets, sets: allSets } = await fetchAllSetsForEvent(
       eventIds[i],
       perPage,
       progressBar
     );
-
 
     combinedSets.push({
       tournament: tournamentNames[i],
@@ -140,6 +142,7 @@ export async function fetchSets() {
     });
   }
 
+  progressBar.stop();
   console.log();
   console.log("All sets successfully fetched and saved to rawSets.json");
 

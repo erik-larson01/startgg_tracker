@@ -1,0 +1,54 @@
+{
+  "IcyMist": {
+    "userId": 86670,
+    "totalSets": 20,
+    "wins": 16,
+    "losses": 4,
+    "headToHead": {
+      "Ray": { "wins": 1, "losses": 0 },
+      "Goblin": { "wins": 1, "losses": 0 },
+      "Updog": { "wins": 1, "losses": 0 },
+      "Dat": { "wins": 1, "losses": 0 },
+      "loaf": { "wins": 1, "losses": 0 },
+      "MuteAce": { "wins": 0, "losses": 1 },
+      "omega": { "wins": 0, "losses": 1 },
+      "ATATA": { "wins": 1, "losses": 0 },
+      "HammerBro": { "wins": 1, "losses": 0 },
+      "Zinoto": { "wins": 2, "losses": 0 },
+      "Osh9": { "wins": 0, "losses": 1 },
+      "duck190": { "wins": 1, "losses": 0 },
+      "Pharaoh": { "wins": 0, "losses": 1 },
+      "Kyrein": { "wins": 1, "losses": 0 },
+      "Aaron": { "wins": 1, "losses": 0 },
+      "Azrael": { "wins": 1, "losses": 0 },
+      "Venchura": { "wins": 1, "losses": 0 },
+      "Slayer": { "wins": 1, "losses": 0 },
+      "Tractor the Thot Killer": { "wins": 1, "losses": 0 }
+    }
+  },
+  "MuteAce": {
+    "userId": 32942,
+    "totalSets": 21,
+    "wins": 18,
+    "losses": 3,
+    "headToHead": {
+      "Dadzie": { "wins": 1, "losses": 0 },
+      "Aaron": { "wins": 2, "losses": 1 },
+      "Doorstop": { "wins": 2, "losses": 0 },
+      "Parz": { "wins": 1, "losses": 0 },
+      "That Man": { "wins": 1, "losses": 0 },
+      "Beast": { "wins": 2, "losses": 0 },
+      "omega": { "wins": 1, "losses": 0 },
+      "IcyMist": { "wins": 1, "losses": 0 },
+      "LeoN": { "wins": 1, "losses": 0 },
+      "Squidplumber": { "wins": 1, "losses": 0 },
+      "Gamerdog": { "wins": 1, "losses": 0 },
+      "Sparg0": { "wins": 0, "losses": 1 },
+      "Rawk": { "wins": 1, "losses": 0 },
+      "Jangmoo": { "wins": 1, "losses": 0 },
+      "Arctic_May": { "wins": 1, "losses": 0 },
+      "Juanpi": { "wins": 1, "losses": 0 },
+      "Lui$": { "wins": 0, "losses": 1 }
+    }
+  }
+}
