@@ -3,6 +3,6 @@ node_modules/
 config/players.json
 config/tournaments.json
 /data/rawSets.json
-/data/userIdMap.json
 /data/results.json
 /data/eventData.json
+/data/standings.json
