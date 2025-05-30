@@ -5,12 +5,12 @@ import { config } from "dotenv";
 config();
 
 const key = process.env.STARTGG_API_KEY;
-const eventPath = path.join(process.cwd(), "data", "eventData.example.json");
+const eventPath = path.join(process.cwd(), "data", "eventData.json");
 const eventData = JSON.parse(fs.readFileSync(eventPath, "utf-8"));
 const eventIds = eventData.map((event) => event.id);
 const tournamentNames = eventData.map((event) => event.tournament);
 const eventNames = eventData.map((event) => event.event);
-const outputPath = path.join(process.cwd(), "data", "rawSets.example.json");
+const outputPath = path.join(process.cwd(), "data", "rawSets.json");
 let perPage = 100;
 
 const query = `query EventSets($eventId: ID!, $page: Int!, $perPage: Int!) {
@@ -70,7 +70,7 @@ async function getTotalSetsForAllEvents() {
   return total;
 }
 
-async function fetchAllSetsForEvent(id, perPage, progressBar) {
+ async function fetchAllSetsForEvent(id, perPage, progressBar) {
   let allSets = [];
   let page = 1;
   let totalPages = 1;
@@ -103,7 +103,7 @@ async function fetchAllSetsForEvent(id, perPage, progressBar) {
   return { totalSets, sets: allSets };
 }
 
-export async function fetchSets() {
+ export async function fetchSets() {
   let combinedSets = [];
   let totalSetsAcrossAll = await getTotalSetsForAllEvents();
   let barEnable = false;

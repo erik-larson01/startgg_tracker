@@ -4,13 +4,13 @@ import { config } from "dotenv";
 config();
 
 const key = process.env.STARTGG_API_KEY;
-const eventPath = path.join(process.cwd(), "data", "eventData.example.json");
+const eventPath = path.join(process.cwd(), "data", "eventData.json");
 const eventData = JSON.parse(fs.readFileSync(eventPath, "utf-8"));
 const eventIds = eventData.map((event) => event.id);
 const tournamentNames = eventData.map((event) => event.tournament);
 const tournamentEntrants = eventData.map((event) => event.entrants);
 const eventNames = eventData.map((event) => event.event);
-const outputPath = path.join(process.cwd(), "data", "standings.example.json");
+const outputPath = path.join(process.cwd(), "data", "standings.json");
 let perPage = 100;
 
 const query = `query EventStandings($eventId: ID!, $page: Int!, $perPage: Int!) {

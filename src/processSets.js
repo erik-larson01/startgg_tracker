@@ -4,17 +4,17 @@ import { config } from "dotenv";
 config();
 
 const key = process.env.STARTGG_API_KEY;
-const playersPath = path.join(process.cwd(), "config", "players.example.json");
+const playersPath = path.join(process.cwd(), "config", "players.json");
 const trackedPlayers = JSON.parse(fs.readFileSync(playersPath, "utf-8"));
-const rawSetsPath = path.join(process.cwd(), "data", "rawSets.example.json");
+const rawSetsPath = path.join(process.cwd(), "data", "rawSets.json");
 const rawSets = JSON.parse(fs.readFileSync(rawSetsPath, "utf-8"));
 const standingsPath = path.join(
   process.cwd(),
   "data",
-  "standings.example.json"
+  "standings.json"
 );
 const standings = JSON.parse(fs.readFileSync(standingsPath, "utf-8"));
-const outputPath = path.join(process.cwd(), "data", "results.example.json");
+const outputPath = path.join(process.cwd(), "data", "results.json");
 
 const allSets = rawSets.tournaments.flatMap((tournament) => tournament.sets);
 const allSlots = allSets.flatMap((set) => set.slots);
