@@ -8,6 +8,12 @@ const playersPath = path.join(process.cwd(), "config", "players.example.json");
 const trackedPlayers = JSON.parse(fs.readFileSync(playersPath, "utf-8"));
 const rawSetsPath = path.join(process.cwd(), "data", "rawSets.example.json");
 const rawSets = JSON.parse(fs.readFileSync(rawSetsPath, "utf-8"));
+const standingsPath = path.join(
+  process.cwd(),
+  "data",
+  "standings.example.json"
+);
+const standings = JSON.parse(fs.readFileSync(standingsPath, "utf-8"));
 const outputPath = path.join(process.cwd(), "data", "results.example.json");
 
 const allSets = rawSets.tournaments.flatMap((tournament) => tournament.sets);
@@ -31,6 +37,38 @@ function getUserIds(trackedPlayers, allSlots) {
     }
   }
   return playerMap;
+}
+
+function addPlacement(userData, standings, trackedPlayerMap) {
+  for (const tournament of standings) {
+    const tournamentName = tournament.tournament;
+    const totalEntrants = tournament.totalEntrants;
+
+    for (const entry of tournament.standings) {
+      const placement = entry.placement;
+      const entrant = entry.entrant;
+
+      if (
+        !entrant ||
+        !entrant.participants ||
+        entrant.participants.length === 0
+      )
+        continue;
+
+      const participant = entrant.participants[0];
+
+      if (!participant.user || !participant.user.id) continue;
+
+      const userId = participant.user.id;
+      const gamerTag = trackedPlayerMap.get(userId);
+
+      if (!gamerTag) continue;
+      userData[gamerTag].placements.push({
+        tournament: tournamentName,
+        placement: placement + " / " + totalEntrants,
+      });
+    }
+  }
 }
 
 function isValidSlot(slot) {
@@ -64,7 +102,7 @@ export function processSets() {
       wins: 0,
       losses: 0,
       headToHead: {},
-      // placements: [], later implementation
+      placements: [],
     };
   }
 
@@ -74,7 +112,7 @@ export function processSets() {
     const entrantId1 = slotOne.entrant.id;
     const entrantId2 = slotTwo.entrant.id;
 
-    if (!isValidSlot(slotOne) || (!isValidSlot(slotTwo))) {
+    if (!isValidSlot(slotOne) || !isValidSlot(slotTwo)) {
       continue;
     }
 
@@ -114,10 +152,20 @@ export function processSets() {
       userData[tag2].headToHead[opponentOf2][isWinner ? "wins" : "losses"]++;
     }
   }
-  
+
+  addPlacement(userData, standings, trackedPlayerMap);
   let json = JSON.stringify(userData, null, 2);
-  json = json.replace(/{\n\s*"wins": (\d+),\n\s*"losses": (\d+)\n\s*}/g, '{ "wins": $1, "losses": $2 }');
+  json = json.replace(
+    /{\n\s*"wins": (\d+),\n\s*"losses": (\d+)\n\s*}/g,
+    '{ "wins": $1, "losses": $2 }'
+  );
+  json = json.replace(
+    /{\n\s*"tournament": "(.*?)",\n\s*"placement": "(.*?)"\n\s*}/g,
+    '{ "tournament": "$1", "placement": "$2" }'
+  );
 
   fs.writeFileSync(outputPath, json);
-  console.log(`Successfully processed all sets from ${trackedPlayerMap.size} users into results.json.`);
+  console.log(
+    `Successfully processed all sets from ${trackedPlayerMap.size} users into results.json.`
+  );
 }

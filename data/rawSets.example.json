@@ -48772,40 +48772,6 @@
           ]
         },
         {
-          "id": 79441941,
-          "winnerId": 17573527,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17573527,
-                "name": "Jahzz0",
-                "participants": [
-                  {
-                    "gamerTag": "Jahzz0",
-                    "user": {
-                      "id": 602598
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17324403,
-                "name": "Arctice",
-                "participants": [
-                  {
-                    "gamerTag": "Arctice",
-                    "user": {
-                      "id": 380928
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
           "id": 79441403,
           "winnerId": 17500903,
           "slots": [
@@ -48866,6 +48832,40 @@
                     "gamerTag": "rydra",
                     "user": {
                       "id": 749024
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79441941,
+          "winnerId": 17573527,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17573527,
+                "name": "Jahzz0",
+                "participants": [
+                  {
+                    "gamerTag": "Jahzz0",
+                    "user": {
+                      "id": 602598
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17324403,
+                "name": "Arctice",
+                "participants": [
+                  {
+                    "gamerTag": "Arctice",
+                    "user": {
+                      "id": 380928
                     }
                   }
                 ]
@@ -52036,40 +52036,6 @@
           ]
         },
         {
-          "id": 79442003,
-          "winnerId": 17215628,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17215628,
-                "name": "LG | Wizzrobe",
-                "participants": [
-                  {
-                    "gamerTag": "Wizzrobe",
-                    "user": {
-                      "id": 1719
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17591673,
-                "name": "mits",
-                "participants": [
-                  {
-                    "gamerTag": "mits",
-                    "user": {
-                      "id": 444963
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
           "id": 79417060,
           "winnerId": 16051137,
           "slots": [
@@ -52138,18 +52104,18 @@
           ]
         },
         {
-          "id": 79442003,
-          "winnerId": 17215628,
+          "id": 79406656,
+          "winnerId": 17072022,
           "slots": [
             {
               "entrant": {
-                "id": 17215628,
-                "name": "LG | Wizzrobe",
+                "id": 17072022,
+                "name": "Tenant",
                 "participants": [
                   {
-                    "gamerTag": "Wizzrobe",
+                    "gamerTag": "Tenant",
                     "user": {
-                      "id": 1719
+                      "id": 1404284
                     }
                   }
                 ]
@@ -52157,13 +52123,47 @@
             },
             {
               "entrant": {
-                "id": 17591673,
-                "name": "mits",
+                "id": 17521926,
+                "name": "cal",
                 "participants": [
                   {
-                    "gamerTag": "mits",
+                    "gamerTag": "cal",
                     "user": {
-                      "id": 444963
+                      "id": 2111228
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79406656,
+          "winnerId": 17072022,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17072022,
+                "name": "Tenant",
+                "participants": [
+                  {
+                    "gamerTag": "Tenant",
+                    "user": {
+                      "id": 1404284
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17521926,
+                "name": "cal",
+                "participants": [
+                  {
+                    "gamerTag": "cal",
+                    "user": {
+                      "id": 2111228
                     }
                   }
                 ]
@@ -53158,6 +53158,40 @@
           ]
         },
         {
+          "id": 79441939,
+          "winnerId": 17399960,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17399960,
+                "name": "TC | UTA | Beastly",
+                "participants": [
+                  {
+                    "gamerTag": "Beastly",
+                    "user": {
+                      "id": 7638
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17343715,
+                "name": "SoftAsSilque",
+                "participants": [
+                  {
+                    "gamerTag": "SoftAsSilque",
+                    "user": {
+                      "id": 1015374
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
           "id": 79441113,
           "winnerId": 17525049,
           "slots": [
@@ -53286,40 +53320,6 @@
                     "gamerTag": "Jeepers",
                     "user": {
                       "id": 153581
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79441939,
-          "winnerId": 17399960,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17399960,
-                "name": "TC | UTA | Beastly",
-                "participants": [
-                  {
-                    "gamerTag": "Beastly",
-                    "user": {
-                      "id": 7638
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17343715,
-                "name": "SoftAsSilque",
-                "participants": [
-                  {
-                    "gamerTag": "SoftAsSilque",
-                    "user": {
-                      "id": 1015374
                     }
                   }
                 ]
@@ -54178,6 +54178,40 @@
           ]
         },
         {
+          "id": 79441940,
+          "winnerId": 17531124,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17531124,
+                "name": "DCG | Chugs",
+                "participants": [
+                  {
+                    "gamerTag": "Chugs",
+                    "user": {
+                      "id": 1126735
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17215628,
+                "name": "LG | Wizzrobe",
+                "participants": [
+                  {
+                    "gamerTag": "Wizzrobe",
+                    "user": {
+                      "id": 1719
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
           "id": 79407700,
           "winnerId": 17480022,
           "slots": [
@@ -54238,40 +54272,6 @@
                     "gamerTag": "Pneuma",
                     "user": {
                       "id": 1103694
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79441940,
-          "winnerId": 17531124,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17531124,
-                "name": "DCG | Chugs",
-                "participants": [
-                  {
-                    "gamerTag": "Chugs",
-                    "user": {
-                      "id": 1126735
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17215628,
-                "name": "LG | Wizzrobe",
-                "participants": [
-                  {
-                    "gamerTag": "Wizzrobe",
-                    "user": {
-                      "id": 1719
                     }
                   }
                 ]
@@ -55300,40 +55300,6 @@
           ]
         },
         {
-          "id": 79446045,
-          "winnerId": 17544985,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17544985,
-                "name": "LG | Sonix",
-                "participants": [
-                  {
-                    "gamerTag": "Sonix",
-                    "user": {
-                      "id": 165614
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17500903,
-                "name": "Liquid | Riddles",
-                "participants": [
-                  {
-                    "gamerTag": "Riddles",
-                    "user": {
-                      "id": 95813
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
           "id": 79420952,
           "winnerId": 16708502,
           "slots": [
@@ -55428,6 +55394,40 @@
                     "gamerTag": "BeastModePaul",
                     "user": {
                       "id": 1165611
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79446045,
+          "winnerId": 17544985,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17544985,
+                "name": "LG | Sonix",
+                "participants": [
+                  {
+                    "gamerTag": "Sonix",
+                    "user": {
+                      "id": 165614
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17500903,
+                "name": "Liquid | Riddles",
+                "participants": [
+                  {
+                    "gamerTag": "Riddles",
+                    "user": {
+                      "id": 95813
                     }
                   }
                 ]
@@ -58972,74 +58972,6 @@
           ]
         },
         {
-          "id": 79417368,
-          "winnerId": 17512271,
-          "slots": [
-            {
-              "entrant": {
-                "id": 16161758,
-                "name": "ベジータ | Saiyan",
-                "participants": [
-                  {
-                    "gamerTag": "Saiyan",
-                    "user": {
-                      "id": 1068185
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17512271,
-                "name": "Meta-Main",
-                "participants": [
-                  {
-                    "gamerTag": "Meta-Main",
-                    "user": {
-                      "id": 1301108
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79407080,
-          "winnerId": 16314942,
-          "slots": [
-            {
-              "entrant": {
-                "id": 16314942,
-                "name": "Rawk",
-                "participants": [
-                  {
-                    "gamerTag": "Rawk",
-                    "user": {
-                      "id": 5816
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 16578400,
-                "name": "Muffle",
-                "participants": [
-                  {
-                    "gamerTag": "Muffle",
-                    "user": {
-                      "id": 597793
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
           "id": 79440851,
           "winnerId": 17361109,
           "slots": [
@@ -59270,6 +59202,74 @@
                     "gamerTag": "Theedium",
                     "user": {
                       "id": 51357
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79417368,
+          "winnerId": 17512271,
+          "slots": [
+            {
+              "entrant": {
+                "id": 16161758,
+                "name": "ベジータ | Saiyan",
+                "participants": [
+                  {
+                    "gamerTag": "Saiyan",
+                    "user": {
+                      "id": 1068185
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17512271,
+                "name": "Meta-Main",
+                "participants": [
+                  {
+                    "gamerTag": "Meta-Main",
+                    "user": {
+                      "id": 1301108
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79407080,
+          "winnerId": 16314942,
+          "slots": [
+            {
+              "entrant": {
+                "id": 16314942,
+                "name": "Rawk",
+                "participants": [
+                  {
+                    "gamerTag": "Rawk",
+                    "user": {
+                      "id": 5816
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 16578400,
+                "name": "Muffle",
+                "participants": [
+                  {
+                    "gamerTag": "Muffle",
+                    "user": {
+                      "id": 597793
                     }
                   }
                 ]
@@ -60196,74 +60196,6 @@
           ]
         },
         {
-          "id": 79403402,
-          "winnerId": 17567612,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17567612,
-                "name": "4番目の王",
-                "participants": [
-                  {
-                    "gamerTag": "4番目の王",
-                    "user": {
-                      "id": 12332
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 16161374,
-                "name": "Solgaleo",
-                "participants": [
-                  {
-                    "gamerTag": "Solgaleo",
-                    "user": {
-                      "id": 1054120
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79425813,
-          "winnerId": 17531939,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17531939,
-                "name": "ODSY | ScrubbedOut",
-                "participants": [
-                  {
-                    "gamerTag": "ScrubbedOut",
-                    "user": {
-                      "id": 661988
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17530649,
-                "name": "UA | Raj",
-                "participants": [
-                  {
-                    "gamerTag": "Raj",
-                    "user": {
-                      "id": 1565285
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
           "id": 79426416,
           "winnerId": 17012460,
           "slots": [
@@ -60290,40 +60222,6 @@
                     "gamerTag": "dish soap",
                     "user": {
                       "id": 1272271
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79442000,
-          "winnerId": 17215628,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17215628,
-                "name": "LG | Wizzrobe",
-                "participants": [
-                  {
-                    "gamerTag": "Wizzrobe",
-                    "user": {
-                      "id": 1719
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 16049833,
-                "name": "Quaggles",
-                "participants": [
-                  {
-                    "gamerTag": "Quaggles",
-                    "user": {
-                      "id": 583730
                     }
                   }
                 ]
@@ -60426,6 +60324,108 @@
                     "gamerTag": "BraveWT",
                     "user": {
                       "id": 45071
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79403402,
+          "winnerId": 17567612,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17567612,
+                "name": "4番目の王",
+                "participants": [
+                  {
+                    "gamerTag": "4番目の王",
+                    "user": {
+                      "id": 12332
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 16161374,
+                "name": "Solgaleo",
+                "participants": [
+                  {
+                    "gamerTag": "Solgaleo",
+                    "user": {
+                      "id": 1054120
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79425813,
+          "winnerId": 17531939,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17531939,
+                "name": "ODSY | ScrubbedOut",
+                "participants": [
+                  {
+                    "gamerTag": "ScrubbedOut",
+                    "user": {
+                      "id": 661988
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17530649,
+                "name": "UA | Raj",
+                "participants": [
+                  {
+                    "gamerTag": "Raj",
+                    "user": {
+                      "id": 1565285
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79442000,
+          "winnerId": 17215628,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17215628,
+                "name": "LG | Wizzrobe",
+                "participants": [
+                  {
+                    "gamerTag": "Wizzrobe",
+                    "user": {
+                      "id": 1719
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 16049833,
+                "name": "Quaggles",
+                "participants": [
+                  {
+                    "gamerTag": "Quaggles",
+                    "user": {
+                      "id": 583730
                     }
                   }
                 ]
@@ -61216,6 +61216,108 @@
           ]
         },
         {
+          "id": 79441463,
+          "winnerId": 17214988,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17214988,
+                "name": "LCU | SFS | Shigura",
+                "participants": [
+                  {
+                    "gamerTag": "Shigura",
+                    "user": {
+                      "id": 234976
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17564212,
+                "name": "Soul",
+                "participants": [
+                  {
+                    "gamerTag": "Soul",
+                    "user": {
+                      "id": 1467686
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79416913,
+          "winnerId": 17342412,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17342412,
+                "name": "UGS | Syphir",
+                "participants": [
+                  {
+                    "gamerTag": "Syphir",
+                    "user": {
+                      "id": 72370
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17507007,
+                "name": "Storm",
+                "participants": [
+                  {
+                    "gamerTag": "Storm",
+                    "user": {
+                      "id": 32015
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79417472,
+          "winnerId": 17565421,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17565421,
+                "name": "OU | triscuit",
+                "participants": [
+                  {
+                    "gamerTag": "triscuit",
+                    "user": {
+                      "id": 971775
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17517952,
+                "name": "OUG | Sativa",
+                "participants": [
+                  {
+                    "gamerTag": "Sativa",
+                    "user": {
+                      "id": 854966
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
           "id": 79416083,
           "winnerId": 17484839,
           "slots": [
@@ -61284,108 +61386,6 @@
           ]
         },
         {
-          "id": 79441463,
-          "winnerId": 17214988,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17214988,
-                "name": "LCU | SFS | Shigura",
-                "participants": [
-                  {
-                    "gamerTag": "Shigura",
-                    "user": {
-                      "id": 234976
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17564212,
-                "name": "Soul",
-                "participants": [
-                  {
-                    "gamerTag": "Soul",
-                    "user": {
-                      "id": 1467686
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79406654,
-          "winnerId": 17521926,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17480318,
-                "name": "(Until then | Evanderburger",
-                "participants": [
-                  {
-                    "gamerTag": "Evanderburger",
-                    "user": {
-                      "id": 953652
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17521926,
-                "name": "cal",
-                "participants": [
-                  {
-                    "gamerTag": "cal",
-                    "user": {
-                      "id": 2111228
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79416913,
-          "winnerId": 17342412,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17342412,
-                "name": "UGS | Syphir",
-                "participants": [
-                  {
-                    "gamerTag": "Syphir",
-                    "user": {
-                      "id": 72370
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17507007,
-                "name": "Storm",
-                "participants": [
-                  {
-                    "gamerTag": "Storm",
-                    "user": {
-                      "id": 32015
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
           "id": 79442001,
           "winnerId": 17591673,
           "slots": [
@@ -61420,18 +61420,18 @@
           ]
         },
         {
-          "id": 79417472,
-          "winnerId": 17565421,
+          "id": 79406654,
+          "winnerId": 17521926,
           "slots": [
             {
               "entrant": {
-                "id": 17565421,
-                "name": "OU | triscuit",
+                "id": 17480318,
+                "name": "(Until then | Evanderburger",
                 "participants": [
                   {
-                    "gamerTag": "triscuit",
+                    "gamerTag": "Evanderburger",
                     "user": {
-                      "id": 971775
+                      "id": 953652
                     }
                   }
                 ]
@@ -61439,13 +61439,13 @@
             },
             {
               "entrant": {
-                "id": 17517952,
-                "name": "OUG | Sativa",
+                "id": 17521926,
+                "name": "cal",
                 "participants": [
                   {
-                    "gamerTag": "Sativa",
+                    "gamerTag": "cal",
                     "user": {
-                      "id": 854966
+                      "id": 2111228
                     }
                   }
                 ]
@@ -62508,6 +62508,40 @@
           ]
         },
         {
+          "id": 79403396,
+          "winnerId": 16905919,
+          "slots": [
+            {
+              "entrant": {
+                "id": 16905919,
+                "name": "TB | DjShoRyu",
+                "participants": [
+                  {
+                    "gamerTag": "DjShoRyu",
+                    "user": {
+                      "id": 40127
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17621576,
+                "name": "Scoutblade",
+                "participants": [
+                  {
+                    "gamerTag": "Scoutblade",
+                    "user": {
+                      "id": 1179897
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
           "id": 79426563,
           "winnerId": 16788202,
           "slots": [
@@ -62772,40 +62806,6 @@
                     "gamerTag": "cubchuu",
                     "user": {
                       "id": 700315
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79403396,
-          "winnerId": 16905919,
-          "slots": [
-            {
-              "entrant": {
-                "id": 16905919,
-                "name": "TB | DjShoRyu",
-                "participants": [
-                  {
-                    "gamerTag": "DjShoRyu",
-                    "user": {
-                      "id": 40127
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17621576,
-                "name": "Scoutblade",
-                "participants": [
-                  {
-                    "gamerTag": "Scoutblade",
-                    "user": {
-                      "id": 1179897
                     }
                   }
                 ]
@@ -63562,6 +63562,108 @@
           ]
         },
         {
+          "id": 79426970,
+          "winnerId": 17605756,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17605756,
+                "name": "Aura | Johnwick100",
+                "participants": [
+                  {
+                    "gamerTag": "Johnwick100",
+                    "user": {
+                      "id": 237545
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 16569176,
+                "name": "The_Verminator",
+                "participants": [
+                  {
+                    "gamerTag": "The_Verminator",
+                    "user": {
+                      "id": 2188420
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79440361,
+          "winnerId": 17584312,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17584312,
+                "name": "Swag | Daveid",
+                "participants": [
+                  {
+                    "gamerTag": "Daveid",
+                    "user": {
+                      "id": 835941
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17483410,
+                "name": "Pronto",
+                "participants": [
+                  {
+                    "gamerTag": "Pronto",
+                    "user": {
+                      "id": 2039868
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79407076,
+          "winnerId": 16578400,
+          "slots": [
+            {
+              "entrant": {
+                "id": 16578400,
+                "name": "Muffle",
+                "participants": [
+                  {
+                    "gamerTag": "Muffle",
+                    "user": {
+                      "id": 597793
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17096773,
+                "name": "ZMS ABG | Klepto",
+                "participants": [
+                  {
+                    "gamerTag": "Klepto",
+                    "user": {
+                      "id": 39316
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
           "id": 79416543,
           "winnerId": 17446076,
           "slots": [
@@ -63656,108 +63758,6 @@
                     "gamerTag": "Adge",
                     "user": {
                       "id": 685968
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79426970,
-          "winnerId": 17605756,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17605756,
-                "name": "Aura | Johnwick100",
-                "participants": [
-                  {
-                    "gamerTag": "Johnwick100",
-                    "user": {
-                      "id": 237545
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 16569176,
-                "name": "The_Verminator",
-                "participants": [
-                  {
-                    "gamerTag": "The_Verminator",
-                    "user": {
-                      "id": 2188420
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79407076,
-          "winnerId": 16578400,
-          "slots": [
-            {
-              "entrant": {
-                "id": 16578400,
-                "name": "Muffle",
-                "participants": [
-                  {
-                    "gamerTag": "Muffle",
-                    "user": {
-                      "id": 597793
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17096773,
-                "name": "ZMS ABG | Klepto",
-                "participants": [
-                  {
-                    "gamerTag": "Klepto",
-                    "user": {
-                      "id": 39316
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79440361,
-          "winnerId": 17584312,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17584312,
-                "name": "Swag | Daveid",
-                "participants": [
-                  {
-                    "gamerTag": "Daveid",
-                    "user": {
-                      "id": 835941
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17483410,
-                "name": "Pronto",
-                "participants": [
-                  {
-                    "gamerTag": "Pronto",
-                    "user": {
-                      "id": 2039868
                     }
                   }
                 ]
@@ -65636,6 +65636,74 @@
           ]
         },
         {
+          "id": 79407182,
+          "winnerId": 17598593,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17598593,
+                "name": "MUOH | SemiStable",
+                "participants": [
+                  {
+                    "gamerTag": "SemiStable",
+                    "user": {
+                      "id": 1458939
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17496027,
+                "name": "Jeet Kong Do | McButters",
+                "participants": [
+                  {
+                    "gamerTag": "McButters",
+                    "user": {
+                      "id": 829686
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79425501,
+          "winnerId": 16159193,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17214995,
+                "name": "LCU | SFS | Kanonzz",
+                "participants": [
+                  {
+                    "gamerTag": "Kanonzz",
+                    "user": {
+                      "id": 485810
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 16159193,
+                "name": "MXC | NU | LemonKW!",
+                "participants": [
+                  {
+                    "gamerTag": "LemonKW!",
+                    "user": {
+                      "id": 1393514
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
           "id": 79406650,
           "winnerId": 17521926,
           "slots": [
@@ -65670,142 +65738,6 @@
           ]
         },
         {
-          "id": 79442237,
-          "winnerId": 16510130,
-          "slots": [
-            {
-              "entrant": {
-                "id": 16510130,
-                "name": "Schlog",
-                "participants": [
-                  {
-                    "gamerTag": "Schlog",
-                    "user": {
-                      "id": 2599861
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17250893,
-                "name": "YES! | Jim Shady",
-                "participants": [
-                  {
-                    "gamerTag": "Jim Shady",
-                    "user": {
-                      "id": 1025098
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79407377,
-          "winnerId": 16832964,
-          "slots": [
-            {
-              "entrant": {
-                "id": 16832964,
-                "name": "Grapezard X",
-                "participants": [
-                  {
-                    "gamerTag": "Grapezard X",
-                    "user": {
-                      "id": 1315203
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17262700,
-                "name": "Lebo",
-                "participants": [
-                  {
-                    "gamerTag": "Lebo",
-                    "user": {
-                      "id": 1523884
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79442237,
-          "winnerId": 16510130,
-          "slots": [
-            {
-              "entrant": {
-                "id": 16510130,
-                "name": "Schlog",
-                "participants": [
-                  {
-                    "gamerTag": "Schlog",
-                    "user": {
-                      "id": 2599861
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17250893,
-                "name": "YES! | Jim Shady",
-                "participants": [
-                  {
-                    "gamerTag": "Jim Shady",
-                    "user": {
-                      "id": 1025098
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79407377,
-          "winnerId": 16832964,
-          "slots": [
-            {
-              "entrant": {
-                "id": 16832964,
-                "name": "Grapezard X",
-                "participants": [
-                  {
-                    "gamerTag": "Grapezard X",
-                    "user": {
-                      "id": 1315203
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17262700,
-                "name": "Lebo",
-                "participants": [
-                  {
-                    "gamerTag": "Lebo",
-                    "user": {
-                      "id": 1523884
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
           "id": 79427398,
           "winnerId": 17035230,
           "slots": [
@@ -65832,6 +65764,74 @@
                     "gamerTag": "Bubbros",
                     "user": {
                       "id": 1882759
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79407182,
+          "winnerId": 17598593,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17598593,
+                "name": "MUOH | SemiStable",
+                "participants": [
+                  {
+                    "gamerTag": "SemiStable",
+                    "user": {
+                      "id": 1458939
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17496027,
+                "name": "Jeet Kong Do | McButters",
+                "participants": [
+                  {
+                    "gamerTag": "McButters",
+                    "user": {
+                      "id": 829686
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79425501,
+          "winnerId": 16159193,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17214995,
+                "name": "LCU | SFS | Kanonzz",
+                "participants": [
+                  {
+                    "gamerTag": "Kanonzz",
+                    "user": {
+                      "id": 485810
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 16159193,
+                "name": "MXC | NU | LemonKW!",
+                "participants": [
+                  {
+                    "gamerTag": "LemonKW!",
+                    "user": {
+                      "id": 1393514
                     }
                   }
                 ]
@@ -66452,6 +66452,40 @@
           ]
         },
         {
+          "id": 79446170,
+          "winnerId": 17573527,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17259338,
+                "name": "Quidd",
+                "participants": [
+                  {
+                    "gamerTag": "Quidd",
+                    "user": {
+                      "id": 634370
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17573527,
+                "name": "Jahzz0",
+                "participants": [
+                  {
+                    "gamerTag": "Jahzz0",
+                    "user": {
+                      "id": 602598
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
           "id": 79421077,
           "winnerId": 17547753,
           "slots": [
@@ -66520,40 +66554,6 @@
           ]
         },
         {
-          "id": 79446170,
-          "winnerId": 17573527,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17259338,
-                "name": "Quidd",
-                "participants": [
-                  {
-                    "gamerTag": "Quidd",
-                    "user": {
-                      "id": 634370
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17573527,
-                "name": "Jahzz0",
-                "participants": [
-                  {
-                    "gamerTag": "Jahzz0",
-                    "user": {
-                      "id": 602598
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
           "id": 79434124,
           "winnerId": 17495443,
           "slots": [
@@ -66580,6 +66580,40 @@
                     "gamerTag": "Lui$",
                     "user": {
                       "id": 97941
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79446171,
+          "winnerId": 17169995,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17169995,
+                "name": "WIN | Peabnut",
+                "participants": [
+                  {
+                    "gamerTag": "Peabnut",
+                    "user": {
+                      "id": 37364
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17468621,
+                "name": "Cosmos",
+                "participants": [
+                  {
+                    "gamerTag": "Cosmos",
+                    "user": {
+                      "id": 47210
                     }
                   }
                 ]
@@ -66648,40 +66682,6 @@
                     "gamerTag": "Kola",
                     "user": {
                       "id": 11144
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79446171,
-          "winnerId": 17169995,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17169995,
-                "name": "WIN | Peabnut",
-                "participants": [
-                  {
-                    "gamerTag": "Peabnut",
-                    "user": {
-                      "id": 37364
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17468621,
-                "name": "Cosmos",
-                "participants": [
-                  {
-                    "gamerTag": "Cosmos",
-                    "user": {
-                      "id": 47210
                     }
                   }
                 ]
@@ -67336,40 +67336,6 @@
           ]
         },
         {
-          "id": 79441929,
-          "winnerId": 17573527,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17573527,
-                "name": "Jahzz0",
-                "participants": [
-                  {
-                    "gamerTag": "Jahzz0",
-                    "user": {
-                      "id": 602598
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17159962,
-                "name": "SL | Sunfish",
-                "participants": [
-                  {
-                    "gamerTag": "Sunfish",
-                    "user": {
-                      "id": 16076
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
           "id": 79416986,
           "winnerId": 17534998,
           "slots": [
@@ -67498,6 +67464,40 @@
                     "gamerTag": "stoad",
                     "user": {
                       "id": 879894
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79441929,
+          "winnerId": 17573527,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17573527,
+                "name": "Jahzz0",
+                "participants": [
+                  {
+                    "gamerTag": "Jahzz0",
+                    "user": {
+                      "id": 602598
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17159962,
+                "name": "SL | Sunfish",
+                "participants": [
+                  {
+                    "gamerTag": "Sunfish",
+                    "user": {
+                      "id": 16076
                     }
                   }
                 ]
@@ -67642,74 +67642,6 @@
           ]
         },
         {
-          "id": 79416011,
-          "winnerId": 17503311,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17503311,
-                "name": "FENNEL | ミーヤー",
-                "participants": [
-                  {
-                    "gamerTag": "ミーヤー",
-                    "user": {
-                      "id": 1002311
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17632538,
-                "name": "Mr.",
-                "participants": [
-                  {
-                    "gamerTag": "Mr.",
-                    "user": {
-                      "id": 1059020
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79417298,
-          "winnerId": 17479562,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17479562,
-                "name": "LG | Tweek",
-                "participants": [
-                  {
-                    "gamerTag": "Tweek",
-                    "user": {
-                      "id": 10213
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17591192,
-                "name": "MIZ | speir",
-                "participants": [
-                  {
-                    "gamerTag": "speir",
-                    "user": {
-                      "id": 1461709
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
           "id": 79416477,
           "winnerId": 16708502,
           "slots": [
@@ -67770,6 +67702,74 @@
                     "gamerTag": "Runaway",
                     "user": {
                       "id": 39099
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79416011,
+          "winnerId": 17503311,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17503311,
+                "name": "FENNEL | ミーヤー",
+                "participants": [
+                  {
+                    "gamerTag": "ミーヤー",
+                    "user": {
+                      "id": 1002311
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17632538,
+                "name": "Mr.",
+                "participants": [
+                  {
+                    "gamerTag": "Mr.",
+                    "user": {
+                      "id": 1059020
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79417298,
+          "winnerId": 17479562,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17479562,
+                "name": "LG | Tweek",
+                "participants": [
+                  {
+                    "gamerTag": "Tweek",
+                    "user": {
+                      "id": 10213
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17591192,
+                "name": "MIZ | speir",
+                "participants": [
+                  {
+                    "gamerTag": "speir",
+                    "user": {
+                      "id": 1461709
                     }
                   }
                 ]
@@ -68524,40 +68524,6 @@
           ]
         },
         {
-          "id": 79426905,
-          "winnerId": 17632150,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17509103,
-                "name": "DBQ | Kami",
-                "participants": [
-                  {
-                    "gamerTag": "Kami",
-                    "user": {
-                      "id": 750241
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17632150,
-                "name": "OSB | Poppin",
-                "participants": [
-                  {
-                    "gamerTag": "Poppin",
-                    "user": {
-                      "id": 1513021
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
           "id": 79416842,
           "winnerId": 17485499,
           "slots": [
@@ -68822,6 +68788,40 @@
                     "gamerTag": "Case",
                     "user": {
                       "id": 47403
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79426905,
+          "winnerId": 17632150,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17509103,
+                "name": "DBQ | Kami",
+                "participants": [
+                  {
+                    "gamerTag": "Kami",
+                    "user": {
+                      "id": 750241
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17632150,
+                "name": "OSB | Poppin",
+                "participants": [
+                  {
+                    "gamerTag": "Poppin",
+                    "user": {
+                      "id": 1513021
                     }
                   }
                 ]
@@ -69714,6 +69714,74 @@
           ]
         },
         {
+          "id": 79416013,
+          "winnerId": 17132626,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17132626,
+                "name": "CVLY | Roger",
+                "participants": [
+                  {
+                    "gamerTag": "Roger",
+                    "user": {
+                      "id": 162418
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17507828,
+                "name": "Teddy",
+                "participants": [
+                  {
+                    "gamerTag": "Teddy",
+                    "user": {
+                      "id": 496143
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79440297,
+          "winnerId": 17482111,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17482111,
+                "name": "Pressure | AndrewT",
+                "participants": [
+                  {
+                    "gamerTag": "AndrewT",
+                    "user": {
+                      "id": 188625
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17273837,
+                "name": "Celestio",
+                "participants": [
+                  {
+                    "gamerTag": "Celestio",
+                    "user": {
+                      "id": 622416
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
           "id": 79426500,
           "winnerId": 17530653,
           "slots": [
@@ -69808,74 +69876,6 @@
                     "gamerTag": "TheDeltaSmasher",
                     "user": {
                       "id": 726953
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79416013,
-          "winnerId": 17132626,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17132626,
-                "name": "CVLY | Roger",
-                "participants": [
-                  {
-                    "gamerTag": "Roger",
-                    "user": {
-                      "id": 162418
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17507828,
-                "name": "Teddy",
-                "participants": [
-                  {
-                    "gamerTag": "Teddy",
-                    "user": {
-                      "id": 496143
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79440297,
-          "winnerId": 17482111,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17482111,
-                "name": "Pressure | AndrewT",
-                "participants": [
-                  {
-                    "gamerTag": "AndrewT",
-                    "user": {
-                      "id": 188625
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17273837,
-                "name": "Celestio",
-                "participants": [
-                  {
-                    "gamerTag": "Celestio",
-                    "user": {
-                      "id": 622416
                     }
                   }
                 ]
@@ -70802,74 +70802,6 @@
           ]
         },
         {
-          "id": 79417403,
-          "winnerId": 17094394,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17094394,
-                "name": "CrowZ",
-                "participants": [
-                  {
-                    "gamerTag": "CrowZ",
-                    "user": {
-                      "id": 27903
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17190349,
-                "name": "KornDog | approximately 7 moths",
-                "participants": [
-                  {
-                    "gamerTag": "approximately 7 moths",
-                    "user": {
-                      "id": 827834
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79426245,
-          "winnerId": 17640645,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17263590,
-                "name": "UTK | DBQ | HammerBro",
-                "participants": [
-                  {
-                    "gamerTag": "HammerBro",
-                    "user": {
-                      "id": 687260
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17640645,
-                "name": "Lynx",
-                "participants": [
-                  {
-                    "gamerTag": "Lynx",
-                    "user": {
-                      "id": 87155
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
           "id": 79426907,
           "winnerId": 17565416,
           "slots": [
@@ -70964,6 +70896,74 @@
                     "gamerTag": "Jazzy G.",
                     "user": {
                       "id": 524773
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79417403,
+          "winnerId": 17094394,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17094394,
+                "name": "CrowZ",
+                "participants": [
+                  {
+                    "gamerTag": "CrowZ",
+                    "user": {
+                      "id": 27903
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17190349,
+                "name": "KornDog | approximately 7 moths",
+                "participants": [
+                  {
+                    "gamerTag": "approximately 7 moths",
+                    "user": {
+                      "id": 827834
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79426245,
+          "winnerId": 17640645,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17263590,
+                "name": "UTK | DBQ | HammerBro",
+                "participants": [
+                  {
+                    "gamerTag": "HammerBro",
+                    "user": {
+                      "id": 687260
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17640645,
+                "name": "Lynx",
+                "participants": [
+                  {
+                    "gamerTag": "Lynx",
+                    "user": {
+                      "id": 87155
                     }
                   }
                 ]
@@ -71856,142 +71856,6 @@
           ]
         },
         {
-          "id": 79426502,
-          "winnerId": 17191368,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17191368,
-                "name": "Justice",
-                "participants": [
-                  {
-                    "gamerTag": "Justice",
-                    "user": {
-                      "id": 250482
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17496793,
-                "name": "Swag | GoFastFun",
-                "participants": [
-                  {
-                    "gamerTag": "GoFastFun",
-                    "user": {
-                      "id": 468379
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79416845,
-          "winnerId": 17547753,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17547753,
-                "name": "CTR | MOTW | Pharaoh",
-                "participants": [
-                  {
-                    "gamerTag": "Pharaoh",
-                    "user": {
-                      "id": 679245
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17304923,
-                "name": "Pyro",
-                "participants": [
-                  {
-                    "gamerTag": "Pyro",
-                    "user": {
-                      "id": 1345097
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79406254,
-          "winnerId": 17352253,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17352253,
-                "name": "MU | ApolloKage",
-                "participants": [
-                  {
-                    "gamerTag": "ApolloKage",
-                    "user": {
-                      "id": 700088
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17323000,
-                "name": "OCO | Cal",
-                "participants": [
-                  {
-                    "gamerTag": "Cal",
-                    "user": {
-                      "id": 1403622
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79442605,
-          "winnerId": 17371072,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17371072,
-                "name": "CF | ChunkyKong",
-                "participants": [
-                  {
-                    "gamerTag": "ChunkyKong",
-                    "user": {
-                      "id": 767368
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 16783773,
-                "name": "Geyser",
-                "participants": [
-                  {
-                    "gamerTag": "Geyser",
-                    "user": {
-                      "id": 1160899
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
           "id": 79403335,
           "winnerId": 17315838,
           "slots": [
@@ -72154,6 +72018,142 @@
                     "gamerTag": "Sailor Jess",
                     "user": {
                       "id": 633447
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79426502,
+          "winnerId": 17191368,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17191368,
+                "name": "Justice",
+                "participants": [
+                  {
+                    "gamerTag": "Justice",
+                    "user": {
+                      "id": 250482
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17496793,
+                "name": "Swag | GoFastFun",
+                "participants": [
+                  {
+                    "gamerTag": "GoFastFun",
+                    "user": {
+                      "id": 468379
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79416845,
+          "winnerId": 17547753,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17547753,
+                "name": "CTR | MOTW | Pharaoh",
+                "participants": [
+                  {
+                    "gamerTag": "Pharaoh",
+                    "user": {
+                      "id": 679245
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17304923,
+                "name": "Pyro",
+                "participants": [
+                  {
+                    "gamerTag": "Pyro",
+                    "user": {
+                      "id": 1345097
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79406254,
+          "winnerId": 17352253,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17352253,
+                "name": "MU | ApolloKage",
+                "participants": [
+                  {
+                    "gamerTag": "ApolloKage",
+                    "user": {
+                      "id": 700088
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17323000,
+                "name": "OCO | Cal",
+                "participants": [
+                  {
+                    "gamerTag": "Cal",
+                    "user": {
+                      "id": 1403622
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79442605,
+          "winnerId": 17371072,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17371072,
+                "name": "CF | ChunkyKong",
+                "participants": [
+                  {
+                    "gamerTag": "ChunkyKong",
+                    "user": {
+                      "id": 767368
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 16783773,
+                "name": "Geyser",
+                "participants": [
+                  {
+                    "gamerTag": "Geyser",
+                    "user": {
+                      "id": 1160899
                     }
                   }
                 ]
@@ -76038,6 +76038,40 @@
           ]
         },
         {
+          "id": 79441986,
+          "winnerId": 16369768,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17342865,
+                "name": "super6733",
+                "participants": [
+                  {
+                    "gamerTag": "super6733",
+                    "user": {
+                      "id": 1950945
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 16369768,
+                "name": "G_man",
+                "participants": [
+                  {
+                    "gamerTag": "G_man",
+                    "user": {
+                      "id": 544344
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
           "id": 79417043,
           "winnerId": 17638296,
           "slots": [
@@ -76098,40 +76132,6 @@
                     "gamerTag": "Dreamless",
                     "user": {
                       "id": 2135567
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79441986,
-          "winnerId": 16369768,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17342865,
-                "name": "super6733",
-                "participants": [
-                  {
-                    "gamerTag": "super6733",
-                    "user": {
-                      "id": 1950945
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 16369768,
-                "name": "G_man",
-                "participants": [
-                  {
-                    "gamerTag": "G_man",
-                    "user": {
-                      "id": 544344
                     }
                   }
                 ]
@@ -77228,40 +77228,6 @@
           ]
         },
         {
-          "id": 79425491,
-          "winnerId": 17638001,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17638001,
-                "name": "Meatbeef",
-                "participants": [
-                  {
-                    "gamerTag": "Meatbeef",
-                    "user": {
-                      "id": 12846
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17344137,
-                "name": "MG | cheeky!",
-                "participants": [
-                  {
-                    "gamerTag": "cheeky!",
-                    "user": {
-                      "id": 43971
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
           "id": 79441987,
           "winnerId": 16860908,
           "slots": [
@@ -77288,6 +77254,40 @@
                     "gamerTag": "Mach",
                     "user": {
                       "id": 2312941
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79425491,
+          "winnerId": 17638001,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17638001,
+                "name": "Meatbeef",
+                "participants": [
+                  {
+                    "gamerTag": "Meatbeef",
+                    "user": {
+                      "id": 12846
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17344137,
+                "name": "MG | cheeky!",
+                "participants": [
+                  {
+                    "gamerTag": "cheeky!",
+                    "user": {
+                      "id": 43971
                     }
                   }
                 ]
@@ -93134,6 +93134,142 @@
           ]
         },
         {
+          "id": 79440837,
+          "winnerId": 17392943,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17630742,
+                "name": "UCA | 2_Tempo",
+                "participants": [
+                  {
+                    "gamerTag": "2_Tempo",
+                    "user": {
+                      "id": 1950163
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17392943,
+                "name": "Chopper",
+                "participants": [
+                  {
+                    "gamerTag": "Chopper",
+                    "user": {
+                      "id": 1023373
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79426401,
+          "winnerId": 17339449,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17339449,
+                "name": "DU | Str4wb3rry",
+                "participants": [
+                  {
+                    "gamerTag": "Str4wb3rry",
+                    "user": {
+                      "id": 1367484
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17626465,
+                "name": "Sykom",
+                "participants": [
+                  {
+                    "gamerTag": "Sykom",
+                    "user": {
+                      "id": 1055816
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79426298,
+          "winnerId": 17314220,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17464569,
+                "name": "Professor Kay",
+                "participants": [
+                  {
+                    "gamerTag": "Professor Kay",
+                    "user": {
+                      "id": 176564
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17314220,
+                "name": "Krustypizza",
+                "participants": [
+                  {
+                    "gamerTag": "Krustypizza",
+                    "user": {
+                      "id": 906367
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79442657,
+          "winnerId": 17448040,
+          "slots": [
+            {
+              "entrant": {
+                "id": 16162173,
+                "name": "GivingGamer",
+                "participants": [
+                  {
+                    "gamerTag": "GivingGamer",
+                    "user": {
+                      "id": 1851523
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17448040,
+                "name": "Mac Nut | Mochi",
+                "participants": [
+                  {
+                    "gamerTag": "Mochi",
+                    "user": {
+                      "id": 658597
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
           "id": 79403387,
           "winnerId": 16824836,
           "slots": [
@@ -93296,142 +93432,6 @@
                     "gamerTag": "Twizzl3r",
                     "user": {
                       "id": 1054445
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79440837,
-          "winnerId": 17392943,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17630742,
-                "name": "UCA | 2_Tempo",
-                "participants": [
-                  {
-                    "gamerTag": "2_Tempo",
-                    "user": {
-                      "id": 1950163
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17392943,
-                "name": "Chopper",
-                "participants": [
-                  {
-                    "gamerTag": "Chopper",
-                    "user": {
-                      "id": 1023373
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79426401,
-          "winnerId": 17339449,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17339449,
-                "name": "DU | Str4wb3rry",
-                "participants": [
-                  {
-                    "gamerTag": "Str4wb3rry",
-                    "user": {
-                      "id": 1367484
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17626465,
-                "name": "Sykom",
-                "participants": [
-                  {
-                    "gamerTag": "Sykom",
-                    "user": {
-                      "id": 1055816
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79426298,
-          "winnerId": 17314220,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17464569,
-                "name": "Professor Kay",
-                "participants": [
-                  {
-                    "gamerTag": "Professor Kay",
-                    "user": {
-                      "id": 176564
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17314220,
-                "name": "Krustypizza",
-                "participants": [
-                  {
-                    "gamerTag": "Krustypizza",
-                    "user": {
-                      "id": 906367
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79442657,
-          "winnerId": 17448040,
-          "slots": [
-            {
-              "entrant": {
-                "id": 16162173,
-                "name": "GivingGamer",
-                "participants": [
-                  {
-                    "gamerTag": "GivingGamer",
-                    "user": {
-                      "id": 1851523
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17448040,
-                "name": "Mac Nut | Mochi",
-                "participants": [
-                  {
-                    "gamerTag": "Mochi",
-                    "user": {
-                      "id": 658597
                     }
                   }
                 ]
@@ -94118,40 +94118,6 @@
           ]
         },
         {
-          "id": 79421070,
-          "winnerId": 17517230,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17532262,
-                "name": "ebs | | Azrael",
-                "participants": [
-                  {
-                    "gamerTag": "Azrael",
-                    "user": {
-                      "id": 609369
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17517230,
-                "name": "SENTRY | IcyMist",
-                "participants": [
-                  {
-                    "gamerTag": "IcyMist",
-                    "user": {
-                      "id": 86670
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
           "id": 79446163,
           "winnerId": 17584105,
           "slots": [
@@ -94178,6 +94144,40 @@
                     "gamerTag": "JeJaJeJa",
                     "user": {
                       "id": 438915
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79421070,
+          "winnerId": 17517230,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17532262,
+                "name": "ebs | | Azrael",
+                "participants": [
+                  {
+                    "gamerTag": "Azrael",
+                    "user": {
+                      "id": 609369
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17517230,
+                "name": "SENTRY | IcyMist",
+                "participants": [
+                  {
+                    "gamerTag": "IcyMist",
+                    "user": {
+                      "id": 86670
                     }
                   }
                 ]
@@ -94560,40 +94560,6 @@
           ]
         },
         {
-          "id": 79479767,
-          "winnerId": 17597834,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17597834,
-                "name": "RC | Shuton",
-                "participants": [
-                  {
-                    "gamerTag": "Shuton",
-                    "user": {
-                      "id": 134839
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17482081,
-                "name": "NS | BeastModePaul",
-                "participants": [
-                  {
-                    "gamerTag": "BeastModePaul",
-                    "user": {
-                      "id": 1165611
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
           "id": 79425726,
           "winnerId": 17525433,
           "slots": [
@@ -94832,6 +94798,74 @@
           ]
         },
         {
+          "id": 79479767,
+          "winnerId": 17597834,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17597834,
+                "name": "RC | Shuton",
+                "participants": [
+                  {
+                    "gamerTag": "Shuton",
+                    "user": {
+                      "id": 134839
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17482081,
+                "name": "NS | BeastModePaul",
+                "participants": [
+                  {
+                    "gamerTag": "BeastModePaul",
+                    "user": {
+                      "id": 1165611
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79406234,
+          "winnerId": 17494302,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17494302,
+                "name": "Chase",
+                "participants": [
+                  {
+                    "gamerTag": "Chase",
+                    "user": {
+                      "id": 1008859
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 16133279,
+                "name": "Turtle337",
+                "participants": [
+                  {
+                    "gamerTag": "Turtle337",
+                    "user": {
+                      "id": 2310069
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
           "id": 79415995,
           "winnerId": 17503311,
           "slots": [
@@ -94926,40 +94960,6 @@
                     "gamerTag": "Ezzy-P",
                     "user": {
                       "id": 2602031
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79406234,
-          "winnerId": 17494302,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17494302,
-                "name": "Chase",
-                "participants": [
-                  {
-                    "gamerTag": "Chase",
-                    "user": {
-                      "id": 1008859
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 16133279,
-                "name": "Turtle337",
-                "participants": [
-                  {
-                    "gamerTag": "Turtle337",
-                    "user": {
-                      "id": 2310069
                     }
                   }
                 ]
@@ -95852,40 +95852,6 @@
           ]
         },
         {
-          "id": 79463473,
-          "winnerId": 17482081,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17482081,
-                "name": "NS | BeastModePaul",
-                "participants": [
-                  {
-                    "gamerTag": "BeastModePaul",
-                    "user": {
-                      "id": 1165611
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17525433,
-                "name": "Stride | SHADIC",
-                "participants": [
-                  {
-                    "gamerTag": "SHADIC",
-                    "user": {
-                      "id": 534169
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
           "id": 79403316,
           "winnerId": 17329934,
           "slots": [
@@ -96122,18 +96088,18 @@
           ]
         },
         {
-          "id": 79417283,
-          "winnerId": 17591192,
+          "id": 79463473,
+          "winnerId": 17482081,
           "slots": [
             {
               "entrant": {
-                "id": 17494858,
-                "name": "Fabian",
+                "id": 17482081,
+                "name": "NS | BeastModePaul",
                 "participants": [
                   {
-                    "gamerTag": "Fabian",
+                    "gamerTag": "BeastModePaul",
                     "user": {
-                      "id": 802872
+                      "id": 1165611
                     }
                   }
                 ]
@@ -96141,47 +96107,13 @@
             },
             {
               "entrant": {
-                "id": 17591192,
-                "name": "MIZ | speir",
+                "id": 17525433,
+                "name": "Stride | SHADIC",
                 "participants": [
                   {
-                    "gamerTag": "speir",
+                    "gamerTag": "SHADIC",
                     "user": {
-                      "id": 1461709
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79425418,
-          "winnerId": 16159193,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17215034,
-                "name": "aWx5 | Dreamless",
-                "participants": [
-                  {
-                    "gamerTag": "Dreamless",
-                    "user": {
-                      "id": 2135567
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 16159193,
-                "name": "MXC | NU | LemonKW!",
-                "participants": [
-                  {
-                    "gamerTag": "LemonKW!",
-                    "user": {
-                      "id": 1393514
+                      "id": 534169
                     }
                   }
                 ]
@@ -96284,6 +96216,74 @@
                     "gamerTag": "WurbleNurfer",
                     "user": {
                       "id": 50043
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79417283,
+          "winnerId": 17591192,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17494858,
+                "name": "Fabian",
+                "participants": [
+                  {
+                    "gamerTag": "Fabian",
+                    "user": {
+                      "id": 802872
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17591192,
+                "name": "MIZ | speir",
+                "participants": [
+                  {
+                    "gamerTag": "speir",
+                    "user": {
+                      "id": 1461709
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79425418,
+          "winnerId": 16159193,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17215034,
+                "name": "aWx5 | Dreamless",
+                "participants": [
+                  {
+                    "gamerTag": "Dreamless",
+                    "user": {
+                      "id": 2135567
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 16159193,
+                "name": "MXC | NU | LemonKW!",
+                "participants": [
+                  {
+                    "gamerTag": "LemonKW!",
+                    "user": {
+                      "id": 1393514
                     }
                   }
                 ]
@@ -99726,18 +99726,18 @@
           ]
         },
         {
-          "id": 79407102,
-          "winnerId": 16187689,
+          "id": 79441917,
+          "winnerId": 17473038,
           "slots": [
             {
               "entrant": {
-                "id": 16187689,
-                "name": "CVLY | Pneumatic",
+                "id": 17473038,
+                "name": "Karflo",
                 "participants": [
                   {
-                    "gamerTag": "Pneumatic",
+                    "gamerTag": "Karflo",
                     "user": {
-                      "id": 588502
+                      "id": 382764
                     }
                   }
                 ]
@@ -99745,47 +99745,13 @@
             },
             {
               "entrant": {
-                "id": 17351553,
-                "name": "PFW | Weedle",
+                "id": 17038798,
+                "name": "7 Rivers",
                 "participants": [
                   {
-                    "gamerTag": "Weedle",
+                    "gamerTag": "7 Rivers",
                     "user": {
-                      "id": 2690700
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79417286,
-          "winnerId": 17322817,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17322817,
-                "name": "WW | Thass",
-                "participants": [
-                  {
-                    "gamerTag": "Thass",
-                    "user": {
-                      "id": 343173
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17104212,
-                "name": "UCA | DJjosh1684",
-                "participants": [
-                  {
-                    "gamerTag": "DJjosh1684",
-                    "user": {
-                      "id": 2683036
+                      "id": 1985337
                     }
                   }
                 ]
@@ -99820,40 +99786,6 @@
                     "gamerTag": "sophiewashere",
                     "user": {
                       "id": 2748015
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79441917,
-          "winnerId": 17473038,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17473038,
-                "name": "Karflo",
-                "participants": [
-                  {
-                    "gamerTag": "Karflo",
-                    "user": {
-                      "id": 382764
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17038798,
-                "name": "7 Rivers",
-                "participants": [
-                  {
-                    "gamerTag": "7 Rivers",
-                    "user": {
-                      "id": 1985337
                     }
                   }
                 ]
@@ -99922,6 +99854,142 @@
                     "gamerTag": "Kira",
                     "user": {
                       "id": 2551261
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79420944,
+          "winnerId": 17479562,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17479562,
+                "name": "LG | Tweek",
+                "participants": [
+                  {
+                    "gamerTag": "Tweek",
+                    "user": {
+                      "id": 10213
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17539090,
+                "name": "Ultra | Skeleton",
+                "participants": [
+                  {
+                    "gamerTag": "Skeleton",
+                    "user": {
+                      "id": 470903
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79446037,
+          "winnerId": 17597834,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17597834,
+                "name": "RC | Shuton",
+                "participants": [
+                  {
+                    "gamerTag": "Shuton",
+                    "user": {
+                      "id": 134839
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17537647,
+                "name": "Apple Reviewer",
+                "participants": [
+                  {
+                    "gamerTag": "Apple Reviewer",
+                    "user": {
+                      "id": 600229
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79403319,
+          "winnerId": 17478640,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17478640,
+                "name": "iR | Mistral",
+                "participants": [
+                  {
+                    "gamerTag": "Mistral",
+                    "user": {
+                      "id": 219315
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17146795,
+                "name": "SweatyThumbs",
+                "participants": [
+                  {
+                    "gamerTag": "SweatyThumbs",
+                    "user": {
+                      "id": 358304
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79407677,
+          "winnerId": 17637467,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17637467,
+                "name": "AoC | comet",
+                "participants": [
+                  {
+                    "gamerTag": "comet",
+                    "user": {
+                      "id": 82180
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17344605,
+                "name": "Truman Kaname",
+                "participants": [
+                  {
+                    "gamerTag": "Truman Kaname",
+                    "user": {
+                      "id": 2718442
                     }
                   }
                 ]
@@ -100126,74 +100194,6 @@
                     "gamerTag": "soup",
                     "user": {
                       "id": 623856
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79403319,
-          "winnerId": 17478640,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17478640,
-                "name": "iR | Mistral",
-                "participants": [
-                  {
-                    "gamerTag": "Mistral",
-                    "user": {
-                      "id": 219315
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17146795,
-                "name": "SweatyThumbs",
-                "participants": [
-                  {
-                    "gamerTag": "SweatyThumbs",
-                    "user": {
-                      "id": 358304
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79407677,
-          "winnerId": 17637467,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17637467,
-                "name": "AoC | comet",
-                "participants": [
-                  {
-                    "gamerTag": "comet",
-                    "user": {
-                      "id": 82180
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17344605,
-                "name": "Truman Kaname",
-                "participants": [
-                  {
-                    "gamerTag": "Truman Kaname",
-                    "user": {
-                      "id": 2718442
                     }
                   }
                 ]
@@ -101050,142 +101050,6 @@
           ]
         },
         {
-          "id": 79426487,
-          "winnerId": 17244678,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17244678,
-                "name": "DARK ANGEL | parvorbital",
-                "participants": [
-                  {
-                    "gamerTag": "parvorbital",
-                    "user": {
-                      "id": 1469302
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17166564,
-                "name": "Sab3r",
-                "participants": [
-                  {
-                    "gamerTag": "Sab3r",
-                    "user": {
-                      "id": 1039912
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79442158,
-          "winnerId": 17377594,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17377594,
-                "name": "Buddwaur",
-                "participants": [
-                  {
-                    "gamerTag": "Buddwaur",
-                    "user": {
-                      "id": 918124
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17049160,
-                "name": "Tallen",
-                "participants": [
-                  {
-                    "gamerTag": "Tallen",
-                    "user": {
-                      "id": 1839246
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79406239,
-          "winnerId": 16971733,
-          "slots": [
-            {
-              "entrant": {
-                "id": 16971733,
-                "name": "Ibex",
-                "participants": [
-                  {
-                    "gamerTag": "Ibex",
-                    "user": {
-                      "id": 1511943
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17250909,
-                "name": "chad!",
-                "participants": [
-                  {
-                    "gamerTag": "chad!",
-                    "user": {
-                      "id": 994689
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79442590,
-          "winnerId": 17473469,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17473469,
-                "name": "m* | BraveWT",
-                "participants": [
-                  {
-                    "gamerTag": "BraveWT",
-                    "user": {
-                      "id": 45071
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17161604,
-                "name": "Hydrogen | DZ",
-                "participants": [
-                  {
-                    "gamerTag": "DZ",
-                    "user": {
-                      "id": 1782752
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
           "id": 79417287,
           "winnerId": 17329778,
           "slots": [
@@ -101314,6 +101178,142 @@
                     "gamerTag": "Rogue Juan",
                     "user": {
                       "id": 1601881
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79426487,
+          "winnerId": 17244678,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17244678,
+                "name": "DARK ANGEL | parvorbital",
+                "participants": [
+                  {
+                    "gamerTag": "parvorbital",
+                    "user": {
+                      "id": 1469302
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17166564,
+                "name": "Sab3r",
+                "participants": [
+                  {
+                    "gamerTag": "Sab3r",
+                    "user": {
+                      "id": 1039912
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79442158,
+          "winnerId": 17377594,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17377594,
+                "name": "Buddwaur",
+                "participants": [
+                  {
+                    "gamerTag": "Buddwaur",
+                    "user": {
+                      "id": 918124
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17049160,
+                "name": "Tallen",
+                "participants": [
+                  {
+                    "gamerTag": "Tallen",
+                    "user": {
+                      "id": 1839246
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79406239,
+          "winnerId": 16971733,
+          "slots": [
+            {
+              "entrant": {
+                "id": 16971733,
+                "name": "Ibex",
+                "participants": [
+                  {
+                    "gamerTag": "Ibex",
+                    "user": {
+                      "id": 1511943
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17250909,
+                "name": "chad!",
+                "participants": [
+                  {
+                    "gamerTag": "chad!",
+                    "user": {
+                      "id": 994689
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79442590,
+          "winnerId": 17473469,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17473469,
+                "name": "m* | BraveWT",
+                "participants": [
+                  {
+                    "gamerTag": "BraveWT",
+                    "user": {
+                      "id": 45071
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17161604,
+                "name": "Hydrogen | DZ",
+                "participants": [
+                  {
+                    "gamerTag": "DZ",
+                    "user": {
+                      "id": 1782752
                     }
                   }
                 ]
@@ -102104,40 +102104,6 @@
           ]
         },
         {
-          "id": 79420946,
-          "winnerId": 17534998,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17534998,
-                "name": "TW | スノー",
-                "participants": [
-                  {
-                    "gamerTag": "スノー",
-                    "user": {
-                      "id": 1843666
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17488054,
-                "name": "DOPECORD | HENRY LUMA",
-                "participants": [
-                  {
-                    "gamerTag": "HENRY LUMA",
-                    "user": {
-                      "id": 794187
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
           "id": 79416001,
           "winnerId": 17646137,
           "slots": [
@@ -102240,6 +102206,40 @@
           ]
         },
         {
+          "id": 79441919,
+          "winnerId": 17324403,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17324403,
+                "name": "Arctice",
+                "participants": [
+                  {
+                    "gamerTag": "Arctice",
+                    "user": {
+                      "id": 380928
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17277749,
+                "name": "Pokemaster#8282",
+                "participants": [
+                  {
+                    "gamerTag": "Pokemaster#8282",
+                    "user": {
+                      "id": 2010758
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
           "id": 79407000,
           "winnerId": 17543476,
           "slots": [
@@ -102300,40 +102300,6 @@
                     "gamerTag": "Zoot",
                     "user": {
                       "id": 2765405
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79441919,
-          "winnerId": 17324403,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17324403,
-                "name": "Arctice",
-                "participants": [
-                  {
-                    "gamerTag": "Arctice",
-                    "user": {
-                      "id": 380928
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17277749,
-                "name": "Pokemaster#8282",
-                "participants": [
-                  {
-                    "gamerTag": "Pokemaster#8282",
-                    "user": {
-                      "id": 2010758
                     }
                   }
                 ]
@@ -102444,18 +102410,18 @@
           ]
         },
         {
-          "id": 79426232,
-          "winnerId": 17263590,
+          "id": 79420946,
+          "winnerId": 17534998,
           "slots": [
             {
               "entrant": {
-                "id": 17263590,
-                "name": "UTK | DBQ | HammerBro",
+                "id": 17534998,
+                "name": "TW | スノー",
                 "participants": [
                   {
-                    "gamerTag": "HammerBro",
+                    "gamerTag": "スノー",
                     "user": {
-                      "id": 687260
+                      "id": 1843666
                     }
                   }
                 ]
@@ -102463,13 +102429,13 @@
             },
             {
               "entrant": {
-                "id": 16979774,
-                "name": "Dant",
+                "id": 17488054,
+                "name": "DOPECORD | HENRY LUMA",
                 "participants": [
                   {
-                    "gamerTag": "Dant",
+                    "gamerTag": "HENRY LUMA",
                     "user": {
-                      "id": 2205893
+                      "id": 794187
                     }
                   }
                 ]
@@ -102648,18 +102614,18 @@
           ]
         },
         {
-          "id": 79446039,
-          "winnerId": 17467049,
+          "id": 79426232,
+          "winnerId": 17263590,
           "slots": [
             {
               "entrant": {
-                "id": 17467049,
-                "name": "Stride | Zomba",
+                "id": 17263590,
+                "name": "UTK | DBQ | HammerBro",
                 "participants": [
                   {
-                    "gamerTag": "Zomba",
+                    "gamerTag": "HammerBro",
                     "user": {
-                      "id": 252388
+                      "id": 687260
                     }
                   }
                 ]
@@ -102667,13 +102633,13 @@
             },
             {
               "entrant": {
-                "id": 17525049,
-                "name": "NBG | Leviathan",
+                "id": 16979774,
+                "name": "Dant",
                 "participants": [
                   {
-                    "gamerTag": "Leviathan",
+                    "gamerTag": "Dant",
                     "user": {
-                      "id": 41091
+                      "id": 2205893
                     }
                   }
                 ]
@@ -102742,6 +102708,40 @@
                     "gamerTag": "NoTag",
                     "user": {
                       "id": 239958
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79446039,
+          "winnerId": 17467049,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17467049,
+                "name": "Stride | Zomba",
+                "participants": [
+                  {
+                    "gamerTag": "Zomba",
+                    "user": {
+                      "id": 252388
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17525049,
+                "name": "NBG | Leviathan",
+                "participants": [
+                  {
+                    "gamerTag": "Leviathan",
+                    "user": {
+                      "id": 41091
                     }
                   }
                 ]
@@ -103328,6 +103328,74 @@
           ]
         },
         {
+          "id": 79446040,
+          "winnerId": 17573527,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17573527,
+                "name": "Jahzz0",
+                "participants": [
+                  {
+                    "gamerTag": "Jahzz0",
+                    "user": {
+                      "id": 602598
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17531124,
+                "name": "DCG | Chugs",
+                "participants": [
+                  {
+                    "gamerTag": "Chugs",
+                    "user": {
+                      "id": 1126735
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79433994,
+          "winnerId": 17493450,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17493450,
+                "name": "Wrath",
+                "participants": [
+                  {
+                    "gamerTag": "Wrath",
+                    "user": {
+                      "id": 52384
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17263441,
+                "name": "Phirb",
+                "participants": [
+                  {
+                    "gamerTag": "Phirb",
+                    "user": {
+                      "id": 814879
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
           "id": 79407105,
           "winnerId": 17366597,
           "slots": [
@@ -103498,18 +103566,18 @@
           ]
         },
         {
-          "id": 79433994,
-          "winnerId": 17493450,
+          "id": 79406572,
+          "winnerId": 17349497,
           "slots": [
             {
               "entrant": {
-                "id": 17493450,
-                "name": "Wrath",
+                "id": 16161446,
+                "name": "Blade",
                 "participants": [
                   {
-                    "gamerTag": "Wrath",
+                    "gamerTag": "Blade",
                     "user": {
-                      "id": 52384
+                      "id": 46949
                     }
                   }
                 ]
@@ -103517,13 +103585,13 @@
             },
             {
               "entrant": {
-                "id": 17263441,
-                "name": "Phirb",
+                "id": 17349497,
+                "name": "DezzieFresh",
                 "participants": [
                   {
-                    "gamerTag": "Phirb",
+                    "gamerTag": "DezzieFresh",
                     "user": {
-                      "id": 814879
+                      "id": 1290572
                     }
                   }
                 ]
@@ -103532,18 +103600,18 @@
           ]
         },
         {
-          "id": 79446040,
-          "winnerId": 17573527,
+          "id": 79416832,
+          "winnerId": 17346137,
           "slots": [
             {
               "entrant": {
-                "id": 17573527,
-                "name": "Jahzz0",
+                "id": 17346137,
+                "name": "Fortune",
                 "participants": [
                   {
-                    "gamerTag": "Jahzz0",
+                    "gamerTag": "Fortune",
                     "user": {
-                      "id": 602598
+                      "id": 841930
                     }
                   }
                 ]
@@ -103551,13 +103619,47 @@
             },
             {
               "entrant": {
-                "id": 17531124,
-                "name": "DCG | Chugs",
+                "id": 16088520,
+                "name": "SSWS | Kaido",
                 "participants": [
                   {
-                    "gamerTag": "Chugs",
+                    "gamerTag": "Kaido",
                     "user": {
-                      "id": 1126735
+                      "id": 334468
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79423551,
+          "winnerId": 17562731,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17562731,
+                "name": "Karate Hottie",
+                "participants": [
+                  {
+                    "gamerTag": "Karate Hottie",
+                    "user": {
+                      "id": 211806
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 16141312,
+                "name": "LXX",
+                "participants": [
+                  {
+                    "gamerTag": "LXX",
+                    "user": {
+                      "id": 1046375
                     }
                   }
                 ]
@@ -103694,108 +103796,6 @@
                     "gamerTag": "Branflakes",
                     "user": {
                       "id": 1495199
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79406572,
-          "winnerId": 17349497,
-          "slots": [
-            {
-              "entrant": {
-                "id": 16161446,
-                "name": "Blade",
-                "participants": [
-                  {
-                    "gamerTag": "Blade",
-                    "user": {
-                      "id": 46949
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17349497,
-                "name": "DezzieFresh",
-                "participants": [
-                  {
-                    "gamerTag": "DezzieFresh",
-                    "user": {
-                      "id": 1290572
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79416832,
-          "winnerId": 17346137,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17346137,
-                "name": "Fortune",
-                "participants": [
-                  {
-                    "gamerTag": "Fortune",
-                    "user": {
-                      "id": 841930
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 16088520,
-                "name": "SSWS | Kaido",
-                "participants": [
-                  {
-                    "gamerTag": "Kaido",
-                    "user": {
-                      "id": 334468
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79423551,
-          "winnerId": 17562731,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17562731,
-                "name": "Karate Hottie",
-                "participants": [
-                  {
-                    "gamerTag": "Karate Hottie",
-                    "user": {
-                      "id": 211806
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 16141312,
-                "name": "LXX",
-                "participants": [
-                  {
-                    "gamerTag": "LXX",
-                    "user": {
-                      "id": 1046375
                     }
                   }
                 ]
@@ -104688,74 +104688,6 @@
           ]
         },
         {
-          "id": 79416003,
-          "winnerId": 17556933,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17556933,
-                "name": "BB | Paras",
-                "participants": [
-                  {
-                    "gamerTag": "Paras",
-                    "user": {
-                      "id": 930338
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 16754570,
-                "name": "Captain Nitro",
-                "participants": [
-                  {
-                    "gamerTag": "Captain Nitro",
-                    "user": {
-                      "id": 2057302
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79407002,
-          "winnerId": 17343413,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17343413,
-                "name": "Juanpi",
-                "participants": [
-                  {
-                    "gamerTag": "Juanpi",
-                    "user": {
-                      "id": 19931
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 16142043,
-                "name": "MG | KingBoomy",
-                "participants": [
-                  {
-                    "gamerTag": "KingBoomy",
-                    "user": {
-                      "id": 953156
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
           "id": 79441383,
           "winnerId": 17383629,
           "slots": [
@@ -104850,6 +104782,74 @@
                     "gamerTag": "64",
                     "user": {
                       "id": 1388650
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79416003,
+          "winnerId": 17556933,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17556933,
+                "name": "BB | Paras",
+                "participants": [
+                  {
+                    "gamerTag": "Paras",
+                    "user": {
+                      "id": 930338
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 16754570,
+                "name": "Captain Nitro",
+                "participants": [
+                  {
+                    "gamerTag": "Captain Nitro",
+                    "user": {
+                      "id": 2057302
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79407002,
+          "winnerId": 17343413,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17343413,
+                "name": "Juanpi",
+                "participants": [
+                  {
+                    "gamerTag": "Juanpi",
+                    "user": {
+                      "id": 19931
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 16142043,
+                "name": "MG | KingBoomy",
+                "participants": [
+                  {
+                    "gamerTag": "KingBoomy",
+                    "user": {
+                      "id": 953156
                     }
                   }
                 ]
@@ -105946,108 +105946,6 @@
           ]
         },
         {
-          "id": 79438985,
-          "winnerId": 17448488,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17448488,
-                "name": "BBT/UC | Prefrontal Leukotomy",
-                "participants": [
-                  {
-                    "gamerTag": "Prefrontal Leukotomy",
-                    "user": {
-                      "id": 1778391
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17620980,
-                "name": "TB | Bobii",
-                "participants": [
-                  {
-                    "gamerTag": "Bobii",
-                    "user": {
-                      "id": 690268
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79417291,
-          "winnerId": 16787661,
-          "slots": [
-            {
-              "entrant": {
-                "id": 16787661,
-                "name": "Gaming Sex | Ikon",
-                "participants": [
-                  {
-                    "gamerTag": "Ikon",
-                    "user": {
-                      "id": 382878
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17278406,
-                "name": "Luna-Gabs",
-                "participants": [
-                  {
-                    "gamerTag": "Luna-Gabs",
-                    "user": {
-                      "id": 21038
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79440288,
-          "winnerId": 17483410,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17483410,
-                "name": "Pronto",
-                "participants": [
-                  {
-                    "gamerTag": "Pronto",
-                    "user": {
-                      "id": 2039868
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17215054,
-                "name": "chimpus",
-                "participants": [
-                  {
-                    "gamerTag": "chimpus",
-                    "user": {
-                      "id": 1876396
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
           "id": 79406574,
           "winnerId": 16049889,
           "slots": [
@@ -106142,6 +106040,108 @@
                     "gamerTag": "IvyN",
                     "user": {
                       "id": 96544
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79438985,
+          "winnerId": 17448488,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17448488,
+                "name": "BBT/UC | Prefrontal Leukotomy",
+                "participants": [
+                  {
+                    "gamerTag": "Prefrontal Leukotomy",
+                    "user": {
+                      "id": 1778391
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17620980,
+                "name": "TB | Bobii",
+                "participants": [
+                  {
+                    "gamerTag": "Bobii",
+                    "user": {
+                      "id": 690268
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79417291,
+          "winnerId": 16787661,
+          "slots": [
+            {
+              "entrant": {
+                "id": 16787661,
+                "name": "Gaming Sex | Ikon",
+                "participants": [
+                  {
+                    "gamerTag": "Ikon",
+                    "user": {
+                      "id": 382878
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17278406,
+                "name": "Luna-Gabs",
+                "participants": [
+                  {
+                    "gamerTag": "Luna-Gabs",
+                    "user": {
+                      "id": 21038
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79440288,
+          "winnerId": 17483410,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17483410,
+                "name": "Pronto",
+                "participants": [
+                  {
+                    "gamerTag": "Pronto",
+                    "user": {
+                      "id": 2039868
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17215054,
+                "name": "chimpus",
+                "participants": [
+                  {
+                    "gamerTag": "chimpus",
+                    "user": {
+                      "id": 1876396
                     }
                   }
                 ]
@@ -106796,6 +106796,40 @@
           ]
         },
         {
+          "id": 79441923,
+          "winnerId": 17343715,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17343715,
+                "name": "SoftAsSilque",
+                "participants": [
+                  {
+                    "gamerTag": "SoftAsSilque",
+                    "user": {
+                      "id": 1015374
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 16933459,
+                "name": "mkliam",
+                "participants": [
+                  {
+                    "gamerTag": "mkliam",
+                    "user": {
+                      "id": 2120261
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
           "id": 79416980,
           "winnerId": 17584115,
           "slots": [
@@ -106898,40 +106932,6 @@
           ]
         },
         {
-          "id": 79441923,
-          "winnerId": 17343715,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17343715,
-                "name": "SoftAsSilque",
-                "participants": [
-                  {
-                    "gamerTag": "SoftAsSilque",
-                    "user": {
-                      "id": 1015374
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 16933459,
-                "name": "mkliam",
-                "participants": [
-                  {
-                    "gamerTag": "mkliam",
-                    "user": {
-                      "id": 2120261
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
           "id": 79416598,
           "winnerId": 16458122,
           "slots": [
@@ -106959,6 +106959,38 @@
                     "user": {
                       "id": 918145
                     }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79417292,
+          "winnerId": 17512271,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17512271,
+                "name": "Meta-Main",
+                "participants": [
+                  {
+                    "gamerTag": "Meta-Main",
+                    "user": {
+                      "id": 1301108
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17564218,
+                "name": "VibrantOddity",
+                "participants": [
+                  {
+                    "gamerTag": "VibrantOddity",
+                    "user": null
                   }
                 ]
               }
@@ -107061,38 +107093,6 @@
                     "user": {
                       "id": 2102744
                     }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79417292,
-          "winnerId": 17512271,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17512271,
-                "name": "Meta-Main",
-                "participants": [
-                  {
-                    "gamerTag": "Meta-Main",
-                    "user": {
-                      "id": 1301108
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17564218,
-                "name": "VibrantOddity",
-                "participants": [
-                  {
-                    "gamerTag": "VibrantOddity",
-                    "user": null
                   }
                 ]
               }
@@ -107848,40 +107848,6 @@
           ]
         },
         {
-          "id": 79407684,
-          "winnerId": 17515289,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17515289,
-                "name": "f(x).ChZr | gokeska",
-                "participants": [
-                  {
-                    "gamerTag": "gokeska",
-                    "user": {
-                      "id": 1520242
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17644316,
-                "name": "1MS | Rei",
-                "participants": [
-                  {
-                    "gamerTag": "Rei",
-                    "user": {
-                      "id": 585298
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
           "id": 79441924,
           "winnerId": 17510488,
           "slots": [
@@ -107916,6 +107882,40 @@
           ]
         },
         {
+          "id": 79407684,
+          "winnerId": 17515289,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17515289,
+                "name": "f(x).ChZr | gokeska",
+                "participants": [
+                  {
+                    "gamerTag": "gokeska",
+                    "user": {
+                      "id": 1520242
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17644316,
+                "name": "1MS | Rei",
+                "participants": [
+                  {
+                    "gamerTag": "Rei",
+                    "user": {
+                      "id": 585298
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
           "id": 79416204,
           "winnerId": 17648461,
           "slots": [
@@ -107942,6 +107942,74 @@
                     "gamerTag": "Saiyan",
                     "user": {
                       "id": 1656268
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79438987,
+          "winnerId": 17627603,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17627603,
+                "name": "Solar",
+                "participants": [
+                  {
+                    "gamerTag": "Solar",
+                    "user": {
+                      "id": 97847
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 16685666,
+                "name": "Czy_Coup",
+                "participants": [
+                  {
+                    "gamerTag": "Czy_Coup",
+                    "user": {
+                      "id": 1888072
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79416981,
+          "winnerId": 17478903,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17478903,
+                "name": "MUOH | Lombardi",
+                "participants": [
+                  {
+                    "gamerTag": "Lombardi",
+                    "user": {
+                      "id": 960348
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 16872543,
+                "name": "Divade011",
+                "participants": [
+                  {
+                    "gamerTag": "Divade011",
+                    "user": {
+                      "id": 330688
                     }
                   }
                 ]
@@ -108044,74 +108112,6 @@
                     "gamerTag": "Samw!se15",
                     "user": {
                       "id": 1735009
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79438987,
-          "winnerId": 17627603,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17627603,
-                "name": "Solar",
-                "participants": [
-                  {
-                    "gamerTag": "Solar",
-                    "user": {
-                      "id": 97847
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 16685666,
-                "name": "Czy_Coup",
-                "participants": [
-                  {
-                    "gamerTag": "Czy_Coup",
-                    "user": {
-                      "id": 1888072
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79416981,
-          "winnerId": 17478903,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17478903,
-                "name": "MUOH | Lombardi",
-                "participants": [
-                  {
-                    "gamerTag": "Lombardi",
-                    "user": {
-                      "id": 960348
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 16872543,
-                "name": "Divade011",
-                "participants": [
-                  {
-                    "gamerTag": "Divade011",
-                    "user": {
-                      "id": 330688
                     }
                   }
                 ]
@@ -109140,142 +109140,6 @@
           ]
         },
         {
-          "id": 79426494,
-          "winnerId": 17528169,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17528169,
-                "name": "skittles",
-                "participants": [
-                  {
-                    "gamerTag": "skittles",
-                    "user": {
-                      "id": 93795
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17557221,
-                "name": "Loudermonkeyboy",
-                "participants": [
-                  {
-                    "gamerTag": "Loudermonkeyboy",
-                    "user": {
-                      "id": 219762
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79416473,
-          "winnerId": 17513634,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17513634,
-                "name": "Yoda Cage",
-                "participants": [
-                  {
-                    "gamerTag": "Yoda Cage",
-                    "user": {
-                      "id": 22479
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17599101,
-                "name": "CodedVortex",
-                "participants": [
-                  {
-                    "gamerTag": "CodedVortex",
-                    "user": {
-                      "id": 1639257
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79426341,
-          "winnerId": 17012460,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17012460,
-                "name": "Amaryllis",
-                "participants": [
-                  {
-                    "gamerTag": "Amaryllis",
-                    "user": {
-                      "id": 167838
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 16049531,
-                "name": "dawniee",
-                "participants": [
-                  {
-                    "gamerTag": "dawniee",
-                    "user": {
-                      "id": 672221
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "id": 79416600,
-          "winnerId": 17399963,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17399963,
-                "name": "Skitz",
-                "participants": [
-                  {
-                    "gamerTag": "Skitz",
-                    "user": {
-                      "id": 785879
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17297048,
-                "name": "Demi Death",
-                "participants": [
-                  {
-                    "gamerTag": "Demi Death",
-                    "user": {
-                      "id": 2620534
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
           "id": 79426900,
           "winnerId": 17495051,
           "slots": [
@@ -109404,6 +109268,142 @@
                     "gamerTag": "RawhideRex",
                     "user": {
                       "id": 626579
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79426494,
+          "winnerId": 17528169,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17528169,
+                "name": "skittles",
+                "participants": [
+                  {
+                    "gamerTag": "skittles",
+                    "user": {
+                      "id": 93795
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17557221,
+                "name": "Loudermonkeyboy",
+                "participants": [
+                  {
+                    "gamerTag": "Loudermonkeyboy",
+                    "user": {
+                      "id": 219762
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79416473,
+          "winnerId": 17513634,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17513634,
+                "name": "Yoda Cage",
+                "participants": [
+                  {
+                    "gamerTag": "Yoda Cage",
+                    "user": {
+                      "id": 22479
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17599101,
+                "name": "CodedVortex",
+                "participants": [
+                  {
+                    "gamerTag": "CodedVortex",
+                    "user": {
+                      "id": 1639257
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79426341,
+          "winnerId": 17012460,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17012460,
+                "name": "Amaryllis",
+                "participants": [
+                  {
+                    "gamerTag": "Amaryllis",
+                    "user": {
+                      "id": 167838
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 16049531,
+                "name": "dawniee",
+                "participants": [
+                  {
+                    "gamerTag": "dawniee",
+                    "user": {
+                      "id": 672221
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79416600,
+          "winnerId": 17399963,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17399963,
+                "name": "Skitz",
+                "participants": [
+                  {
+                    "gamerTag": "Skitz",
+                    "user": {
+                      "id": 785879
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17297048,
+                "name": "Demi Death",
+                "participants": [
+                  {
+                    "gamerTag": "Demi Death",
+                    "user": {
+                      "id": 2620534
                     }
                   }
                 ]
@@ -115972,40 +115972,6 @@
           ]
         },
         {
-          "id": 79446140,
-          "winnerId": 17316232,
-          "slots": [
-            {
-              "entrant": {
-                "id": 17316232,
-                "name": "MBS | ULTRA | Yeast",
-                "participants": [
-                  {
-                    "gamerTag": "Yeast",
-                    "user": {
-                      "id": 673294
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "entrant": {
-                "id": 17262605,
-                "name": "SENTRY | spoop",
-                "participants": [
-                  {
-                    "gamerTag": "spoop",
-                    "user": {
-                      "id": 20162
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
           "id": 79421047,
           "winnerId": 17468528,
           "slots": [
@@ -116032,6 +115998,40 @@
                     "gamerTag": "CrowZ",
                     "user": {
                       "id": 27903
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 79446140,
+          "winnerId": 17316232,
+          "slots": [
+            {
+              "entrant": {
+                "id": 17316232,
+                "name": "MBS | ULTRA | Yeast",
+                "participants": [
+                  {
+                    "gamerTag": "Yeast",
+                    "user": {
+                      "id": 673294
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entrant": {
+                "id": 17262605,
+                "name": "SENTRY | spoop",
+                "participants": [
+                  {
+                    "gamerTag": "spoop",
+                    "user": {
+                      "id": 20162
                     }
                   }
                 ]

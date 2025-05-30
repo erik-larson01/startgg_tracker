@@ -24,7 +24,11 @@
       "Venchura": { "wins": 1, "losses": 0 },
       "Slayer": { "wins": 1, "losses": 0 },
       "Tractor the Thot Killer": { "wins": 1, "losses": 0 }
-    }
+    },
+    "placements": [
+      { "tournament": "Riptide 2023", "placement": "4 / 717" },
+      { "tournament": "Riptide 2024", "placement": "25 / 1024" }
+    ]
   },
   "MuteAce": {
     "userId": 32942,
@@ -49,6 +53,10 @@
       "Arctic_May": { "wins": 1, "losses": 0 },
       "Juanpi": { "wins": 1, "losses": 0 },
       "Lui$": { "wins": 0, "losses": 1 }
-    }
+    },
+    "placements": [
+      { "tournament": "Riptide 2023", "placement": "1 / 717" },
+      { "tournament": "Riptide 2024", "placement": "17 / 1024" }
+    ]
   }
 }
