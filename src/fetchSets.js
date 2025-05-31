@@ -6,12 +6,7 @@ config();
 
 const key = process.env.STARTGG_API_KEY;
 const eventPath = path.join(process.cwd(), "data", "eventData.json");
-const eventData = JSON.parse(fs.readFileSync(eventPath, "utf-8"));
-const eventIds = eventData.map((event) => event.id);
-const tournamentNames = eventData.map((event) => event.tournament);
-const eventNames = eventData.map((event) => event.event);
 const outputPath = path.join(process.cwd(), "data", "rawSets.json");
-let perPage = 100;
 
 const query = `query EventSets($eventId: ID!, $page: Int!, $perPage: Int!) {
   event(id: $eventId) {
@@ -42,7 +37,7 @@ const query = `query EventSets($eventId: ID!, $page: Int!, $perPage: Int!) {
   }
 }`;
 
-async function getTotalSetsForAllEvents() {
+async function getTotalSetsForAllEvents(eventIds) {
   let total = 0;
 
   for (let i = 0; i < eventIds.length; i++) {
@@ -104,8 +99,13 @@ async function getTotalSetsForAllEvents() {
 }
 
  export async function fetchSets() {
+  const eventData = JSON.parse(fs.readFileSync(eventPath, "utf-8"));
+  const eventIds = eventData.map((event) => event.id);
+  const tournamentNames = eventData.map((event) => event.tournament);
+  const eventNames = eventData.map((event) => event.event);
+  const perPage = 100;
   let combinedSets = [];
-  let totalSetsAcrossAll = await getTotalSetsForAllEvents();
+  let totalSetsAcrossAll = await getTotalSetsForAllEvents(eventIds);
   let barEnable = false;
 
   const progressBar = new cliProgress.SingleBar(

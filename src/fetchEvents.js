@@ -6,7 +6,6 @@ config();
 const key = process.env.STARTGG_API_KEY;
 const tournamentPath = path.join(process.cwd(), "config", "tournaments.json");
 const eventIdPath = path.join(process.cwd(), "data", "eventData.json");
-const tournamentData = JSON.parse(fs.readFileSync(tournamentPath, "utf-8"));
 
 const query = `query getEventId($slug: String) {
   event(slug: $slug) {
@@ -39,6 +38,7 @@ async function fetchId(slug) {
 }
 
 export async function fetchEvents() {
+  const tournamentData = JSON.parse(fs.readFileSync(tournamentPath, "utf-8"));
   const allEvents = [];
   for (const tournament of tournamentData) {
     const slug = tournament.substring("https://www.start.gg/".length);

@@ -5,19 +5,10 @@ config();
 
 const key = process.env.STARTGG_API_KEY;
 const playersPath = path.join(process.cwd(), "config", "players.json");
-const trackedPlayers = JSON.parse(fs.readFileSync(playersPath, "utf-8"));
 const rawSetsPath = path.join(process.cwd(), "data", "rawSets.json");
-const rawSets = JSON.parse(fs.readFileSync(rawSetsPath, "utf-8"));
-const standingsPath = path.join(
-  process.cwd(),
-  "data",
-  "standings.json"
-);
-const standings = JSON.parse(fs.readFileSync(standingsPath, "utf-8"));
+const standingsPath = path.join(process.cwd(),"data","standings.json");
 const outputPath = path.join(process.cwd(), "data", "results.json");
 
-const allSets = rawSets.tournaments.flatMap((tournament) => tournament.sets);
-const allSlots = allSets.flatMap((set) => set.slots);
 
 function getUserIds(trackedPlayers, allSlots) {
   const playerMap = new Map();
@@ -81,6 +72,12 @@ function isValidSlot(slot) {
 }
 
 export function processSets() {
+const trackedPlayers = JSON.parse(fs.readFileSync(playersPath, "utf-8"));
+const rawSets = JSON.parse(fs.readFileSync(rawSetsPath, "utf-8"));
+const standings = JSON.parse(fs.readFileSync(standingsPath, "utf-8"));
+const allSets = rawSets.tournaments.flatMap((tournament) => tournament.sets);
+const allSlots = allSets.flatMap((set) => set.slots);
+
   const entrantIdToUserId = new Map();
   for (const set of allSets) {
     for (const slot of set.slots) {
