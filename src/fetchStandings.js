@@ -70,9 +70,6 @@ export async function fetchStandings() {
   const perPage = 100;
   let combinedPlacements = [];
   for (let i = 0; i < eventIds.length; i++) {
-    console.log(
-      `\nFetching standings data for tournament with name: ${tournamentNames[i]} and event: ${eventNames[i]}...`
-    );
     let entrantsForTourney = tournamentEntrants[i];
     const { totalEntrants, standings: allStandings } =
       await fetchAllStandingsForEvent(eventIds[i], perPage, entrantsForTourney);
@@ -86,5 +83,4 @@ export async function fetchStandings() {
     });
   }
   fs.writeFileSync(outputPath, JSON.stringify(combinedPlacements, null, 2));
-  console.log(`All standings successfully fetched and saved to standings.json`);
 }

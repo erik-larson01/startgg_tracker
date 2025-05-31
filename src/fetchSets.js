@@ -106,27 +106,23 @@ async function getTotalSetsForAllEvents(eventIds) {
   const perPage = 100;
   let combinedSets = [];
   let totalSetsAcrossAll = await getTotalSetsForAllEvents(eventIds);
-  let barEnable = false;
 
   const progressBar = new cliProgress.SingleBar(
     {
-      format: "Fetching Sets |{bar}| {percentage}% || {value}/{total} Sets",
+      format: "Fetching Sets |{bar}| {percentage}% || {value}/{total} Sets || {tournament}",
       barCompleteChar: "\u2588",
       barIncompleteChar: "\u2591",
       hideCursor: true,
+      clearOnComplete: false,
+      stopOnComplete: true,
     },
     cliProgress.Presets.shades_classic
   );
 
-  for (let i = 0; i < eventIds.length; i++) {
-    console.log(
-      `\nFetching set data for tournament with name: ${tournamentNames[i]} and event: ${eventNames[i]}...`
-    );
+  progressBar.start(totalSetsAcrossAll, 0);
 
-    if (!barEnable) {
-      progressBar.start(totalSetsAcrossAll, 0);
-      barEnable = true;
-    }
+  for (let i = 0; i < eventIds.length; i++) {
+    progressBar.update({ tournament: `${tournamentNames[i]} / ${eventNames[i]}` });
     const { totalSets, sets: allSets } = await fetchAllSetsForEvent(
       eventIds[i],
       perPage,
