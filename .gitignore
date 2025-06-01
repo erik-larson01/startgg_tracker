@@ -6,3 +6,4 @@ config/tournaments.json
 /data/results.json
 /data/eventData.json
 /data/standings.json
+credentials.json
