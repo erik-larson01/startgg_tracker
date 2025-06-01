@@ -22,6 +22,7 @@ async function main() {
   console.log("\nProcessing sets in rawSets.json...");
   await processSets();
   console.log("\nDone! All data successfully fetched and processed.\n");
+  console.log("View results.json for full player stats and tournament placements.")
 }
 
 main();

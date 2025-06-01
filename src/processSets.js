@@ -47,9 +47,10 @@ function addPlacement(userData, standings, trackedPlayerMap) {
       if (!participant.user || !participant.user.id) continue;
 
       const userId = participant.user.id;
+      const gamerTag = trackedPlayerMap.get(userId);
 
-      if (!userData[userId]) continue;
-      userData[userId].placements.push({
+      if (!userData[gamerTag]) continue;
+      userData[gamerTag].placements.push({
         tournament: tournamentName,
         placement: placement + " / " + totalEntrants,
       });
@@ -88,8 +89,8 @@ export function processSets() {
   const trackedPlayerMap = getUserIds(trackedPlayers, allSlots);
   const userData = {};
   for (const [userId, gamerTag] of trackedPlayerMap) {
-    userData[userId] = {
-      gamerTag,
+    userData[gamerTag] = {
+      userId,
       totalSets: 0,
       wins: 0,
       losses: 0,
@@ -117,56 +118,45 @@ export function processSets() {
     const winnerEntrantId = set.winnerId;
     const winnerUserId = entrantIdToUserId.get(winnerEntrantId);
 
-    if (!userData[userId1] && !userData[userId2]) continue;
+    if (!userData[tag1] && !userData[tag2]) continue;
 
-    if (userData[userId1]) {
+    if (userData[tag1]) {
       const isWinner = userId1 === winnerUserId;
-      userData[userId1][isWinner ? "wins" : "losses"]++;
-      userData[userId1].totalSets++;
+      userData[tag1][isWinner ? "wins" : "losses"]++;
+      userData[tag1].totalSets++;
 
       const opponentOf1 =
         trackedPlayerMap.get(userId2) ||
         slotTwo.entrant.participants[0].gamerTag;
 
-      if (!userData[userId1].headToHead[userId2]) {
-        userData[userId1].headToHead[userId2] = {
-          gamerTag: opponentOf1,
-          wins: 0,
-          losses: 0,
-        };
+      if (!userData[tag1].headToHead[opponentOf1]) {
+        userData[tag1].headToHead[opponentOf1] = { wins: 0, losses: 0 };
       }
-
-      userData[userId1].headToHead[userId2].gamerTag = opponentOf1;
-      userData[userId1].headToHead[userId2][isWinner ? "wins" : "losses"]++;
+      userData[tag1].headToHead[opponentOf1][isWinner ? "wins" : "losses"]++;
     }
 
-    if (userData[userId2]) {
+    if (userData[tag2]) {
       const isWinner = userId2 === winnerUserId;
-      userData[userId2][isWinner ? "wins" : "losses"]++;
-      userData[userId2].totalSets++;
+      userData[tag2][isWinner ? "wins" : "losses"]++;
+      userData[tag2].totalSets++;
 
       const opponentOf2 =
         trackedPlayerMap.get(userId1) ||
         slotOne.entrant.participants[0].gamerTag;
 
-      if (!userData[userId2].headToHead[userId1]) {
-        userData[userId2].headToHead[userId1] = {
-          gamerTag: opponentOf2,
-          wins: 0,
-          losses: 0,
-        };
+      if (!userData[tag2].headToHead[opponentOf2]) {
+        userData[tag2].headToHead[opponentOf2] = { wins: 0, losses: 0 };
       }
 
-      userData[userId2].headToHead[userId1].gamerTag = opponentOf2;
-      userData[userId2].headToHead[userId1][isWinner ? "wins" : "losses"]++;
+      userData[tag2].headToHead[opponentOf2][isWinner ? "wins" : "losses"]++;
     }
   }
 
   addPlacement(userData, standings, trackedPlayerMap);
   let json = JSON.stringify(userData, null, 2);
   json = json.replace(
-    /{\n\s*"gamerTag": "(.*?)",\n\s*"wins": (\d+),\n\s*"losses": (\d+)\n\s*}/g,
-    '{ "gamerTag": "$1", "wins": $2, "losses": $3 }'
+    /{\n\s*"wins": (\d+),\n\s*"losses": (\d+)\n\s*}/g,
+    '{ "wins": $1, "losses": $2 }'
   );
   json = json.replace(
     /{\n\s*"tournament": "(.*?)",\n\s*"placement": "(.*?)"\n\s*}/g,

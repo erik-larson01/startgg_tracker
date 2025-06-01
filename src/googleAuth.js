@@ -6,7 +6,7 @@ async function getAuthClient() {
   try {
     const credentialsPath = path.join(process.cwd(), "credentials.json");
 
-    if (fs.existsSync(credentialsPath)) {
+    if (!fs.existsSync(credentialsPath)) {
       throw new Error(`Credentials.json not found at ${credentialsPath}`);
     }
     const auth = new google.auth.GoogleAuth({
@@ -26,7 +26,7 @@ async function getAuthClient() {
 
 export async function createSheetsClient() {
   try {
-    const authClient = getAuthClient();
+    const authClient = await getAuthClient();
     const sheets = google.sheets({ version: "v4", auth: authClient });
     console.log("Google Sheets client created successfully");
     return sheets;
