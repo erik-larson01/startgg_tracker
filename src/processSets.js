@@ -67,6 +67,54 @@ function isValidSlot(slot) {
   );
 }
 
+function finalizeStats(userData) {
+  for (const tag in userData) {
+    const player = userData[tag];
+
+    if (player.totalSets != 0) {
+      player.winRate = +(player.wins / player.totalSets).toFixed(2);
+    }
+
+    const placements = player.placements.map((placement) => {
+      const numerator = Number(placement.placement.split("/")[0].trim());
+      return numerator;
+    });
+
+    player.eventsAttended = placements.length;
+    player.bestPlaceMent = Math.min(...placements);
+    player.worstPlacement = Math.max(...placements);
+
+    let top8Count = 0;
+    for (const place of placements) {
+      if (place <= 8) {
+        top8Count++;
+      }
+    }
+
+    player.top8Count = top8Count;
+    if (placements.size != 0) {
+      const totalPlacements = placements.reduce((sum, placement) => sum + placement, 0);
+      player.avgPlacement = Number((totalPlacements / player.eventsAttended).toFixed(2));
+    }
+    const headToHead = player.headToHead;
+    let pos = 0,
+      neg = 0,
+      even = 0;
+
+    for (const opponent in headToHead) {
+      const record = headToHead[opponent];
+      if (record.wins > record.losses) pos++;
+      else if (record.wins === record.losses) even++;
+      else neg++;
+    }
+
+    player.totalOpponents = Object.keys(headToHead).length;
+    player.positiveRecords = pos;
+    player.evenRecords = even;
+    player.negativeRecords = neg;
+  }
+}
+
 export function processSets() {
   const trackedPlayers = JSON.parse(fs.readFileSync(playersPath, "utf-8"));
   const rawSets = JSON.parse(fs.readFileSync(rawSetsPath, "utf-8"));
@@ -94,6 +142,16 @@ export function processSets() {
       totalSets: 0,
       wins: 0,
       losses: 0,
+      winRate: 0.0,
+      totalOpponents: 0,
+      positiveRecords: 0,
+      evenRecords: 0,
+      negativeRecords: 0,
+      eventsAttended: 0,
+      avgPlacement: 0.0,
+      bestPlaceMent: null,
+      worstPlacement: null,
+      top8Count: 0,
       headToHead: {},
       placements: [],
     };
@@ -153,6 +211,8 @@ export function processSets() {
   }
 
   addPlacement(userData, standings, trackedPlayerMap);
+  finalizeStats(userData);
+
   let json = JSON.stringify(userData, null, 2);
   json = json.replace(
     /{\n\s*"wins": (\d+),\n\s*"losses": (\d+)\n\s*}/g,
