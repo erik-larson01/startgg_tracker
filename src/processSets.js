@@ -81,7 +81,7 @@ function finalizeStats(userData) {
     });
 
     player.eventsAttended = placements.length;
-    player.bestPlaceMent = Math.min(...placements);
+    player.bestPlacement = Math.min(...placements);
     player.worstPlacement = Math.max(...placements);
 
     let top8Count = 0;
@@ -149,7 +149,7 @@ export function processSets() {
       negativeRecords: 0,
       eventsAttended: 0,
       avgPlacement: 0.0,
-      bestPlaceMent: null,
+      bestPlacement: null,
       worstPlacement: null,
       top8Count: 0,
       headToHead: {},
