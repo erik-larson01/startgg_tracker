@@ -40,20 +40,69 @@ function generateHeadToHeadMatrix(results) {
   return data;
 }
 
-function generateMatchColorRequest(matchData, sheetId) {
+function generatePlayerMatches(results) {
+  const allPlayers = getAllTrackedPlayers(results);
+  const headers = [...allPlayers];
+  const data = [headers];
+
+  // Pre-process each player's opponent matches via a map
+  const playerOpponentMap = {};
+  let maxRows = 0;
+
+  // Create a map of every player's opponents and their H2H score
+  for (const player of allPlayers) {
+    const opponentRows = [];
+
+    let headToHead = {};
+    if (results[player] && results[player].headToHead) {
+      headToHead = results[player].headToHead;
+    } else {
+      continue;
+    }
+
+    for (const opponent in headToHead) {
+      const h2h = headToHead[opponent];
+      opponentRows.push(`${h2h.wins}-${h2h.losses} ${opponent}`);
+    }
+
+    playerOpponentMap[player] = opponentRows;
+    maxRows = Math.max(maxRows, opponentRows.length);
+  }
+
+  // Build rows based on maxRows
+  for (let i = 0; i < maxRows; i++) {
+    const row = [];
+
+    for (const player of allPlayers) {
+      const opponentRows = playerOpponentMap[player];
+      // Fill row with match, or let it be empty if no match in this row
+      row.push(opponentRows ? opponentRows[i] : "");
+    }
+
+    data.push(row);
+  }
+
+  return data;
+}
+
+function generateMatchColorRequest(matchData, sheetId, index) {
   const requests = [];
 
   // For all rows, go through each column and update cell color based on record
   for (let rowIndex = 1; rowIndex < matchData.length; rowIndex++) {
     const row = matchData[rowIndex];
-    for (let colIndex = 1; colIndex < row.length; colIndex++) {
+    for (let colIndex = index; colIndex < row.length; colIndex++) {
       const cellValue = row[colIndex];
       if (typeof cellValue !== "string") continue;
+
+      if (cellValue === "-" || !cellValue.includes("-")) continue;
 
       const [scorePart] = cellValue.split(" ");
       const [winStr, loseStr] = scorePart.split("-");
       const wins = parseInt(winStr);
       const losses = parseInt(loseStr);
+
+      if (isNaN(wins) || isNaN(losses)) continue;
 
       let bgColor;
       if (wins > losses) {
@@ -85,7 +134,6 @@ function generateMatchColorRequest(matchData, sheetId) {
   }
   return requests;
 }
-
 
 function generatePlayerSummary(results) {
   const players = getAllTrackedPlayers(results);
@@ -280,15 +328,15 @@ async function getSheetId(sheets, sheetName) {
     const spreadsheet = await sheets.spreadsheets.get({
       spreadsheetId: spreadsheetId,
     });
-    
+
     const existingSheets = spreadsheet.data.sheets;
-    
+
     for (let i = 0; i < existingSheets.length; i++) {
       if (existingSheets[i].properties.title === sheetName) {
         return existingSheets[i].properties.sheetId;
       }
     }
-    
+
     throw new Error(`Sheet with name "${sheetName}" not found`);
   } catch (error) {
     console.log(`Error getting sheet ID for ${sheetName}:`, error.message);
@@ -307,8 +355,24 @@ export async function exportResults() {
   const headToHeadData = generateHeadToHeadMatrix(results);
   await writeDataToSheet(sheets, tabs.h2h, headToHeadData);
   const headToHeadSheetId = await getSheetId(sheets, tabs.h2h);
-  const coloringRequest = generateMatchColorRequest(headToHeadData, headToHeadSheetId);
+  const colIndex = 1;
+  const coloringRequest = generateMatchColorRequest(
+    headToHeadData,
+    headToHeadSheetId,
+    colIndex
+  );
   await applyFormatting(sheets, tabs.h2h, coloringRequest);
+
+  const playerMatchesData = generatePlayerMatches(results);
+  await writeDataToSheet(sheets, tabs.playerMatches, playerMatchesData);
+  const playerMatchesSheetId = await getSheetId(sheets, tabs.playerMatches);
+  const columnIndex = 0;
+  const matchesColoringRequest = generateMatchColorRequest(
+    playerMatchesData,
+    playerMatchesSheetId,
+    columnIndex
+  );
+  await applyFormatting(sheets, tabs.playerMatches, matchesColoringRequest);
 
   const placementData = getPlacementData(results);
   await writeDataToSheet(sheets, tabs.placements, placementData);
