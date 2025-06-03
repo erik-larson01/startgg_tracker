@@ -8,6 +8,7 @@ const key = process.env.STARTGG_API_KEY;
 const eventPath = path.join(process.cwd(), "data", "eventData.json");
 const outputPath = path.join(process.cwd(), "data", "rawSets.json");
 
+// Query for all sets including values to determine winner
 const query = `query EventSets($eventId: ID!, $page: Int!, $perPage: Int!) {
   event(id: $eventId) {
     id
@@ -40,6 +41,7 @@ const query = `query EventSets($eventId: ID!, $page: Int!, $perPage: Int!) {
 async function getTotalSetsForAllEvents(eventIds) {
   let total = 0;
 
+  // For all tournaments, fetch one page to accumulate the # of total sets across all events
   for (let i = 0; i < eventIds.length; i++) {
     const response = await fetch("https://api.start.gg/gql/alpha", {
       method: "POST",
@@ -65,11 +67,13 @@ async function getTotalSetsForAllEvents(eventIds) {
   return total;
 }
 
- async function fetchAllSetsForEvent(id, perPage, progressBar) {
+async function fetchAllSetsForEvent(id, perPage, progressBar) {
   let allSets = [];
   let page = 1;
   let totalPages = 1;
   let totalSets = 0;
+
+  // Fetch all sets for an event, returning the total # of sets & the sets object
   do {
     const response = await fetch("https://api.start.gg/gql/alpha", {
       method: "POST",
@@ -84,7 +88,10 @@ async function getTotalSetsForAllEvents(eventIds) {
     });
 
     const data = await response.json();
+    // Destructure sets from the data response
     const { sets } = data.data.event;
+
+    // Update total pages for while loop during first fetch
     totalPages = sets.pageInfo.totalPages;
     totalSets = sets.pageInfo.total;
     allSets.push(...sets.nodes);
@@ -92,13 +99,14 @@ async function getTotalSetsForAllEvents(eventIds) {
     if (progressBar) {
       progressBar.increment(sets.nodes.length);
     }
+
     page++;
   } while (page <= totalPages);
 
   return { totalSets, sets: allSets };
 }
 
- export async function fetchSets() {
+export async function fetchSets() {
   const eventData = JSON.parse(fs.readFileSync(eventPath, "utf-8"));
   const eventIds = eventData.map((event) => event.id);
   const tournamentNames = eventData.map((event) => event.tournament);
@@ -107,9 +115,11 @@ async function getTotalSetsForAllEvents(eventIds) {
   let combinedSets = [];
   let totalSetsAcrossAll = await getTotalSetsForAllEvents(eventIds);
 
+  // Create a cli-progress progress bar object 
   const progressBar = new cliProgress.SingleBar(
     {
-      format: "Fetching Sets |{bar}| {percentage}% || {value}/{total} Sets || {tournament}",
+      format:
+        "Fetching Sets |{bar}| {percentage}% || {value}/{total} Sets || {tournament}",
       barCompleteChar: "\u2588",
       barIncompleteChar: "\u2591",
       hideCursor: true,
@@ -122,7 +132,11 @@ async function getTotalSetsForAllEvents(eventIds) {
   progressBar.start(totalSetsAcrossAll, 0);
 
   for (let i = 0; i < eventIds.length; i++) {
-    progressBar.update({ tournament: `${tournamentNames[i]} / ${eventNames[i]}` });
+    // Update the printed tournament if the prior tournament has all sets fetched
+    progressBar.update({
+      tournament: `${tournamentNames[i]} / ${eventNames[i]}`,
+    });
+
     const { totalSets, sets: allSets } = await fetchAllSetsForEvent(
       eventIds[i],
       perPage,
@@ -142,6 +156,7 @@ async function getTotalSetsForAllEvents(eventIds) {
   console.log();
   console.log(`All sets successfully fetched and saved to rawSets.json`);
 
+  // Append totalSetsAcross all tournaments for easier JSON viewing
   const finalOutput = {
     totalSets: totalSetsAcrossAll,
     tournaments: combinedSets,

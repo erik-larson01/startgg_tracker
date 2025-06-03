@@ -9,6 +9,7 @@ async function getAuthClient() {
     if (!fs.existsSync(credentialsPath)) {
       throw new Error(`Credentials.json not found at ${credentialsPath}`);
     }
+    // Create a new auth instance using generated credentials (service account)
     const auth = new google.auth.GoogleAuth({
       keyFile: credentialsPath,
       scopes: "https://www.googleapis.com/auth/spreadsheets",
@@ -27,6 +28,7 @@ async function getAuthClient() {
 export async function createSheetsClient() {
   try {
     const authClient = await getAuthClient();
+    // Create a specific Google sheets client
     const sheets = google.sheets({ version: "v4", auth: authClient });
     console.log("Google Sheets client created successfully");
     return sheets;

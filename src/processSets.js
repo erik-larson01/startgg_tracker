@@ -6,6 +6,7 @@ const rawSetsPath = path.join(process.cwd(), "data", "rawSets.json");
 const standingsPath = path.join(process.cwd(), "data", "standings.json");
 const outputPath = path.join(process.cwd(), "data", "results.json");
 
+// Create a map of all tracked players to their respective user IDs
 function getUserIds(trackedPlayers, allSlots) {
   const playerMap = new Map();
   for (const player of trackedPlayers) {
@@ -26,6 +27,7 @@ function getUserIds(trackedPlayers, allSlots) {
   return playerMap;
 }
 
+// Append placement to each user using trackedPlayerMap
 function addPlacement(userData, standings, trackedPlayerMap) {
   for (const tournament of standings) {
     const tournamentName = tournament.tournament;
@@ -67,6 +69,8 @@ function isValidSlot(slot) {
   );
 }
 
+
+// Add additional stats to userData object
 function finalizeStats(userData) {
   for (const tag in userData) {
     const player = userData[tag];
@@ -101,6 +105,7 @@ function finalizeStats(userData) {
       neg = 0,
       even = 0;
 
+      // Update head to head record based on wins vs losses
     for (const opponent in headToHead) {
       const record = headToHead[opponent];
       if (record.wins > record.losses) pos++;
@@ -119,9 +124,12 @@ export function processSets() {
   const trackedPlayers = JSON.parse(fs.readFileSync(playersPath, "utf-8"));
   const rawSets = JSON.parse(fs.readFileSync(rawSetsPath, "utf-8"));
   const standings = JSON.parse(fs.readFileSync(standingsPath, "utf-8"));
+
+  // Use flapmap to extract just sets and just slots from the raw data
   const allSets = rawSets.tournaments.flatMap((tournament) => tournament.sets);
   const allSlots = allSets.flatMap((set) => set.slots);
 
+  // Create a map of entrantIds to user Ids to extract the winner from every set
   const entrantIdToUserId = new Map();
   for (const set of allSets) {
     for (const slot of set.slots) {
@@ -136,6 +144,8 @@ export function processSets() {
 
   const trackedPlayerMap = getUserIds(trackedPlayers, allSlots);
   const userData = {};
+
+  // Initalize userData object for all tracked players
   for (const [userId, gamerTag] of trackedPlayerMap) {
     userData[gamerTag] = {
       userId,
@@ -167,17 +177,25 @@ export function processSets() {
       continue;
     }
 
+
+    // Extract userIds from created map
     const userId1 = entrantIdToUserId.get(entrantId1);
     const userId2 = entrantIdToUserId.get(entrantId2);
 
+    // Extract tags from trackedPlayerMap
     const tag1 = trackedPlayerMap.get(userId1);
     const tag2 = trackedPlayerMap.get(userId2);
 
     const winnerEntrantId = set.winnerId;
+
+    // Get the userId of the winner
     const winnerUserId = entrantIdToUserId.get(winnerEntrantId);
 
+    // If no players are tracked, move to next set
     if (!userData[tag1] && !userData[tag2]) continue;
 
+
+    // Update results for tracked player if in slot 1
     if (userData[tag1]) {
       const isWinner = userId1 === winnerUserId;
       userData[tag1][isWinner ? "wins" : "losses"]++;
@@ -193,6 +211,7 @@ export function processSets() {
       userData[tag1].headToHead[opponentOf1][isWinner ? "wins" : "losses"]++;
     }
 
+    // Update results for tracked player if in slot 2
     if (userData[tag2]) {
       const isWinner = userId2 === winnerUserId;
       userData[tag2][isWinner ? "wins" : "losses"]++;
@@ -213,6 +232,8 @@ export function processSets() {
   addPlacement(userData, standings, trackedPlayerMap);
   finalizeStats(userData);
 
+
+  // Use regular expressions to format h2h and placements on one line
   let json = JSON.stringify(userData, null, 2);
   json = json.replace(
     /{\n\s*"wins": (\d+),\n\s*"losses": (\d+)\n\s*}/g,

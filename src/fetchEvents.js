@@ -7,6 +7,7 @@ const key = process.env.STARTGG_API_KEY;
 const tournamentPath = path.join(process.cwd(), "config", "tournaments.json");
 const eventIdPath = path.join(process.cwd(), "data", "eventData.json");
 
+// Query for tournament details
 const query = `query getEventId($slug: String) {
   event(slug: $slug) {
     id
@@ -19,13 +20,14 @@ const query = `query getEventId($slug: String) {
 }`;
 
 async function fetchId(slug) {
+  // Fetch response using single graphQL endpoint
   const response = await fetch("https://api.start.gg/gql/alpha", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${key}`,
     },
-    body: JSON.stringify({
+    body: JSON.stringify({ 
       query,
       variables: { slug },
     }),
@@ -38,9 +40,10 @@ async function fetchId(slug) {
 }
 
 export async function fetchEvents() {
-  const tournamentData = JSON.parse(fs.readFileSync(tournamentPath, "utf-8"));
   const allEvents = [];
+  const tournamentData = JSON.parse(fs.readFileSync(tournamentPath, "utf-8"));
   for (const tournament of tournamentData) {
+    // Create each slug using tournament details only
     const slug = tournament.substring("https://www.start.gg/".length);
     const event = await fetchId(slug);
     if (event) {

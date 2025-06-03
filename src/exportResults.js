@@ -2,10 +2,9 @@ import fs from "fs";
 import path from "path";
 import { createSheetsClient } from "./googleAuth.js";
 const resultsPath = path.join(process.cwd(), "data", "results.json");
-const results = JSON.parse(fs.readFileSync(resultsPath, "utf-8"));
 
+// Replace your spreadsheet ID here
 const spreadsheetId = "1tnBu5hQesCq7uQdRxMJC_oFFSMIzSb9Y0X9S3ZLJPb0";
-
 
 const tabs = {
   summary: "Player Summary",
@@ -14,12 +13,12 @@ const tabs = {
   playerMatches: "Player Matches",
 };
 
-function getAllTrackedPlayers() {
+function getAllTrackedPlayers(results) {
   return Object.keys(results);
 }
 
-function generatePlayerSummary() {
-  const players = getAllTrackedPlayers();
+function generatePlayerSummary(results) {
+  const players = getAllTrackedPlayers(results);
   const headers = [
     "Player Name",
     "Total Sets",
@@ -65,8 +64,8 @@ function generatePlayerSummary() {
   return data;
 }
 
-function getPlacementData() {
-  const trackedPlayers = getAllTrackedPlayers();
+function getPlacementData(results) {
+  const trackedPlayers = getAllTrackedPlayers(results);
   const headers = ["Tournament", "Entrants", ...trackedPlayers];
   const data = [headers];
 
@@ -102,7 +101,7 @@ function getPlacementData() {
         }
       }
 
-      // If we found a placement, extract the placement
+      // If we found an entry, extract the placement
       if (placementEntry) {
         const placeNumber = parseInt(placementEntry.placement.split(" / ")[0]);
         row.push(placeNumber);
@@ -195,13 +194,12 @@ async function writeDataToSheet(sheets, sheetName, data) {
   }
 }
 
-async function exportResults() {
+export async function exportResults() {
+  const results = JSON.parse(fs.readFileSync(resultsPath, "utf-8"));
   const sheets = await createSheetsClient();
   await setupSheets(sheets);
-  const summaryData = generatePlayerSummary();
+  const summaryData = generatePlayerSummary(results);
   await writeDataToSheet(sheets, tabs.summary, summaryData);
-  const placementData = getPlacementData();
+  const placementData = getPlacementData(results);
   await writeDataToSheet(sheets, tabs.placements, placementData);
 }
-
-exportResults();
