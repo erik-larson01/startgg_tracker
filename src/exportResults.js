@@ -17,6 +17,76 @@ function getAllTrackedPlayers(results) {
   return Object.keys(results);
 }
 
+function generateHeadToHeadMatrix(results) {
+  const allPlayers = getAllTrackedPlayers(results);
+  const headers = ["Player", ...allPlayers];
+  const data = [headers];
+
+  // For all row players..
+  for (const playerA of allPlayers) {
+    const row = [playerA];
+
+    // Make a column for every header player with match data
+    for (const playerB of allPlayers) {
+      if (playerA === playerB) {
+        row.push("-");
+      } else {
+        const h2h = results[playerA].headToHead[playerB];
+        row.push(h2h ? `${h2h.wins}-${h2h.losses}` : `0-0`);
+      }
+    }
+    data.push(row);
+  }
+  return data;
+}
+
+function generateMatchColorRequest(matchData, sheetId) {
+  const requests = [];
+
+  // For all rows, go through each column and update cell color based on record
+  for (let rowIndex = 1; rowIndex < matchData.length; rowIndex++) {
+    const row = matchData[rowIndex];
+    for (let colIndex = 1; colIndex < row.length; colIndex++) {
+      const cellValue = row[colIndex];
+      if (typeof cellValue !== "string") continue;
+
+      const [scorePart] = cellValue.split(" ");
+      const [winStr, loseStr] = scorePart.split("-");
+      const wins = parseInt(winStr);
+      const losses = parseInt(loseStr);
+
+      let bgColor;
+      if (wins > losses) {
+        bgColor = { red: 0.8, green: 1.0, blue: 0.8 };
+      } else if (wins === losses) {
+        bgColor = { red: 1.0, green: 1.0, blue: 0.8 };
+      } else if (wins < losses) {
+        bgColor = { red: 1.0, green: 0.8, blue: 0.8 };
+      }
+
+      requests.push({
+        repeatCell: {
+          range: {
+            sheetId: sheetId,
+            startRowIndex: rowIndex,
+            endRowIndex: rowIndex + 1,
+            startColumnIndex: colIndex,
+            endColumnIndex: colIndex + 1,
+          },
+          cell: {
+            userEnteredFormat: {
+              backgroundColor: bgColor,
+            },
+          },
+          fields: "userEnteredFormat.backgroundColor",
+        },
+      });
+    }
+  }
+  return requests;
+}
+
+
 function generatePlayerSummary(results) {
   const players = getAllTrackedPlayers(results);
   const headers = [
@@ -40,7 +110,7 @@ function generatePlayerSummary(results) {
   const data = [headers];
 
   // For each player, append a row of their individual stats
-  players.forEach((playerName) => {
+  for (const playerName of players) {
     const player = results[playerName];
     const row = [
       playerName,
@@ -59,7 +129,7 @@ function generatePlayerSummary(results) {
       player.top8Count,
     ];
     data.push(row);
-  });
+  }
 
   return data;
 }
@@ -149,7 +219,7 @@ async function setupSheets(sheets) {
     const remainingTitles = [tabs.playerMatches, tabs.h2h, tabs.placements];
 
     // Create Player Matches, H2H, Placements Sheets
-    remainingTitles.forEach((tabTitle) => {
+    for (const tabTitle of remainingTitles) {
       if (!existingSheetsTitles.includes(tabTitle)) {
         requests.push({
           addSheet: {
@@ -159,7 +229,7 @@ async function setupSheets(sheets) {
           },
         });
       }
-    });
+    }
 
     // Update the spreadsheet
     if (requests.length > 0) {
@@ -172,7 +242,18 @@ async function setupSheets(sheets) {
     console.log("Sheets setup completed");
   } catch (error) {
     console.log("Error setting up sheets:", error.message);
-    throw error;
+  }
+}
+
+async function applyFormatting(sheets, sheetName, requests) {
+  try {
+    await sheets.spreadsheets.batchUpdate({
+      spreadsheetId: spreadsheetId,
+      resource: { requests },
+    });
+    console.log(`Match coloring applied to ${sheetName}`);
+  } catch (error) {
+    console.log(`Error adding color to ${sheetName}`, error.message);
   }
 }
 
@@ -190,16 +271,45 @@ async function writeDataToSheet(sheets, sheetName, data) {
     console.log(`Data written to ${sheetName} sheet`);
   } catch (error) {
     console.log(`Error writing data to ${sheetName}`, error.message);
-    throw error;
+  }
+}
+
+// Gets sheetId for cell formatting/coloring
+async function getSheetId(sheets, sheetName) {
+  try {
+    const spreadsheet = await sheets.spreadsheets.get({
+      spreadsheetId: spreadsheetId,
+    });
+    
+    const existingSheets = spreadsheet.data.sheets;
+    
+    for (let i = 0; i < existingSheets.length; i++) {
+      if (existingSheets[i].properties.title === sheetName) {
+        return existingSheets[i].properties.sheetId;
+      }
+    }
+    
+    throw new Error(`Sheet with name "${sheetName}" not found`);
+  } catch (error) {
+    console.log(`Error getting sheet ID for ${sheetName}:`, error.message);
   }
 }
 
 export async function exportResults() {
   const results = JSON.parse(fs.readFileSync(resultsPath, "utf-8"));
   const sheets = await createSheetsClient();
+
   await setupSheets(sheets);
+
   const summaryData = generatePlayerSummary(results);
   await writeDataToSheet(sheets, tabs.summary, summaryData);
+
+  const headToHeadData = generateHeadToHeadMatrix(results);
+  await writeDataToSheet(sheets, tabs.h2h, headToHeadData);
+  const headToHeadSheetId = await getSheetId(sheets, tabs.h2h);
+  const coloringRequest = generateMatchColorRequest(headToHeadData, headToHeadSheetId);
+  await applyFormatting(sheets, tabs.h2h, coloringRequest);
+
   const placementData = getPlacementData(results);
   await writeDataToSheet(sheets, tabs.placements, placementData);
 }
