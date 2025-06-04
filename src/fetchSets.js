@@ -7,6 +7,12 @@ config();
 const key = process.env.STARTGG_API_KEY;
 const eventPath = path.join(process.cwd(), "data", "eventData.json");
 const outputPath = path.join(process.cwd(), "data", "rawSets.json");
+const REQUEST_DELAY = 800;
+
+// Rate limit delay
+function delay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
 // Query for all sets including values to determine winner
 const query = `query EventSets($eventId: ID!, $page: Int!, $perPage: Int!) {
@@ -58,6 +64,7 @@ async function getTotalSetsForAllEvents(eventIds) {
         },
       }),
     });
+        await delay(REQUEST_DELAY);
 
     const data = await response.json();
     const setsInfo = data.data.event.sets.pageInfo;
@@ -100,7 +107,10 @@ async function fetchAllSetsForEvent(id, perPage, progressBar) {
       progressBar.increment(sets.nodes.length);
     }
 
-    page++;
+      if (page <= totalPages) {
+      await delay(REQUEST_DELAY);
+    }
+    page++
   } while (page <= totalPages);
 
   return { totalSets, sets: allSets };
@@ -150,6 +160,9 @@ export async function fetchSets() {
       totalSets,
       sets: allSets,
     });
+
+        await delay(REQUEST_DELAY);
+
   }
 
   progressBar.stop();

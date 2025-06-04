@@ -6,6 +6,12 @@ config();
 const key = process.env.STARTGG_API_KEY;
 const tournamentPath = path.join(process.cwd(), "config", "tournaments.json");
 const eventIdPath = path.join(process.cwd(), "data", "eventData.json");
+ const REQUEST_DELAY = 800;
+
+// Rate limit delay
+function delay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
 // Query for tournament details
 const query = `query getEventId($slug: String) {
@@ -32,7 +38,8 @@ async function fetchId(slug) {
       variables: { slug },
     }),
   });
-
+  
+ await delay(REQUEST_DELAY);
   const data = await response.json();
   if (data.data && data.data.event) {
     return data.data.event;

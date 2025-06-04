@@ -6,6 +6,12 @@ config();
 const key = process.env.STARTGG_API_KEY;
 const eventPath = path.join(process.cwd(), "data", "eventData.json");
 const outputPath = path.join(process.cwd(), "data", "standings.json");
+const REQUEST_DELAY = 800;
+
+// Rate limit delay
+function delay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
 // Query to get standings and a participant's name and ID
 const query = `query EventStandings($eventId: ID!, $page: Int!, $perPage: Int!) {
@@ -33,7 +39,7 @@ const query = `query EventStandings($eventId: ID!, $page: Int!, $perPage: Int!) 
   }
 }`;
 
- async function fetchAllStandingsForEvent(id, perPage, totalEntrants) {
+async function fetchAllStandingsForEvent(id, perPage, totalEntrants) {
   let allStandings = [];
   let page = 1;
   const totalPages = Math.ceil(totalEntrants / perPage);
@@ -51,6 +57,8 @@ const query = `query EventStandings($eventId: ID!, $page: Int!, $perPage: Int!) 
         variables: { eventId: id, page, perPage },
       }),
     });
+
+    await delay(REQUEST_DELAY);
 
     const data = await response.json();
     const { standings } = data.data.event;
@@ -84,6 +92,7 @@ export async function fetchStandings() {
       totalEntrants,
       standings: allStandings,
     });
+     await delay(REQUEST_DELAY);
   }
   fs.writeFileSync(outputPath, JSON.stringify(combinedPlacements, null, 2));
 }
