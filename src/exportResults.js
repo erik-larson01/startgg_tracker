@@ -4,7 +4,7 @@ import { createSheetsClient } from "./googleAuth.js";
 const resultsPath = path.join(process.cwd(), "data", "results.json");
 
 // Replace your spreadsheet ID here
-const spreadsheetId = "1tnBu5hQesCq7uQdRxMJC_oFFSMIzSb9Y0X9S3ZLJPb0";
+const spreadsheetId = "14wOo7qILx2vCEFppgt-1FHYd-8-E0gSvc6a6HR4vDDY";
 
 const tabs = {
   summary: "Player Summary",
@@ -248,7 +248,7 @@ async function setupSheets(sheets) {
       (spreadsheet) => spreadsheet.properties.title
     );
 
-    // Acculumuate requests for batchUpdate
+    // Accumulate requests for batchUpdate
     const requests = [];
 
     // Replace "Sheet1" with "Player Summary"
