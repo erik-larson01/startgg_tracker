@@ -12,6 +12,7 @@
   "description": "Tournament scraper and data compiler for StartGG",
   "dependencies": {
     "cli-progress": "^3.12.0",
+    "commander": "^14.0.0",
     "dotenv": "^16.5.0",
     "googleapis": "^149.0.0"
   }
