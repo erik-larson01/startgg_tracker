@@ -46,31 +46,34 @@ const query = `query EventSets($eventId: ID!, $page: Int!, $perPage: Int!) {
 
 async function getTotalSetsForAllEvents(eventIds) {
   let total = 0;
-
-  // For all tournaments, fetch one page to accumulate the # of total sets across all events
-  for (let i = 0; i < eventIds.length; i++) {
-    const response = await fetch("https://api.start.gg/gql/alpha", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${key}`,
-      },
-      body: JSON.stringify({
-        query,
-        variables: {
-          eventId: eventIds[i],
-          page: 1,
-          perPage: 1,
+  try {
+    // For all tournaments, fetch one page to accumulate the # of total sets across all events
+    for (let i = 0; i < eventIds.length; i++) {
+      const response = await fetch("https://api.start.gg/gql/alpha", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${key}`,
         },
-      }),
-    });
-        await delay(REQUEST_DELAY);
+        body: JSON.stringify({
+          query,
+          variables: {
+            eventId: eventIds[i],
+            page: 1,
+            perPage: 1,
+          },
+        }),
+      });
+      await delay(REQUEST_DELAY);
 
-    const data = await response.json();
-    const setsInfo = data.data.event.sets.pageInfo;
-    total += setsInfo.total;
+      const data = await response.json();
+      const setsInfo = data.data.event.sets.pageInfo;
+      total += setsInfo.total;
+    }
+  } catch (error) {
+    console.log("Error getting total sets across all events:", error.message);
+    throw error;
   }
-
   return total;
 }
 
@@ -80,39 +83,43 @@ async function fetchAllSetsForEvent(id, perPage, progressBar) {
   let totalPages = 1;
   let totalSets = 0;
 
-  // Fetch all sets for an event, returning the total # of sets & the sets object
-  do {
-    const response = await fetch("https://api.start.gg/gql/alpha", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${key}`,
-      },
-      body: JSON.stringify({
-        query,
-        variables: { eventId: id, page, perPage },
-      }),
-    });
+  try {
+    // Fetch all sets for an event, returning the total # of sets & the sets object
+    do {
+      const response = await fetch("https://api.start.gg/gql/alpha", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${key}`,
+        },
+        body: JSON.stringify({
+          query,
+          variables: { eventId: id, page, perPage },
+        }),
+      });
 
-    const data = await response.json();
-    // Destructure sets from the data response
-    const { sets } = data.data.event;
+      const data = await response.json();
+      // Destructure sets from the data response
+      const { sets } = data.data.event;
 
-    // Update total pages for while loop during first fetch
-    totalPages = sets.pageInfo.totalPages;
-    totalSets = sets.pageInfo.total;
-    allSets.push(...sets.nodes);
+      // Update total pages for while loop during first fetch
+      totalPages = sets.pageInfo.totalPages;
+      totalSets = sets.pageInfo.total;
+      allSets.push(...sets.nodes);
 
-    if (progressBar) {
-      progressBar.increment(sets.nodes.length);
-    }
+      if (progressBar) {
+        progressBar.increment(sets.nodes.length);
+      }
 
       if (page <= totalPages) {
-      await delay(REQUEST_DELAY);
-    }
-    page++
-  } while (page <= totalPages);
-
+        await delay(REQUEST_DELAY);
+      }
+      page++;
+    } while (page <= totalPages);
+  } catch (error) {
+    console.log(`Error fetching sets for eventID ${id}:`, error.message);
+    throw error;
+  }
   return { totalSets, sets: allSets };
 }
 
@@ -125,7 +132,7 @@ export async function fetchSets() {
   let combinedSets = [];
   let totalSetsAcrossAll = await getTotalSetsForAllEvents(eventIds);
 
-  // Create a cli-progress progress bar object 
+  // Create a cli-progress progress bar object
   const progressBar = new cliProgress.SingleBar(
     {
       format:
@@ -161,8 +168,7 @@ export async function fetchSets() {
       sets: allSets,
     });
 
-        await delay(REQUEST_DELAY);
-
+    await delay(REQUEST_DELAY);
   }
 
   progressBar.stop();

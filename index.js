@@ -22,12 +22,12 @@ async function main() {
   console.log(`All standings successfully fetched and saved to standings.json`);
   await fetchSets();
   console.log("\nProcessing sets in rawSets.json...");
-  await processSets();
+  processSets();
   console.log("\nDone! All data successfully fetched and processed.\n");
   console.log("View results.json for full player stats and tournament placements.")
   await exportResults();
   } catch (error) {
-    "Error caught! Please restart the program."
+    console.log("Error caught! Please restart the program and check your setup.");
     process.exit(1);
   }
 }

@@ -290,6 +290,7 @@ async function setupSheets(sheets) {
     console.log("Sheets setup completed");
   } catch (error) {
     console.log("Error setting up sheets:", error.message);
+    throw error;
   }
 }
 
@@ -302,6 +303,7 @@ async function applyFormatting(sheets, sheetName, requests) {
     console.log(`Match coloring applied to ${sheetName}`);
   } catch (error) {
     console.log(`Error adding color to ${sheetName}`, error.message);
+    throw error;
   }
 }
 
@@ -319,6 +321,7 @@ async function writeDataToSheet(sheets, sheetName, data) {
     console.log(`Data written to ${sheetName} sheet`);
   } catch (error) {
     console.log(`Error writing data to ${sheetName}`, error.message);
+    throw error;
   }
 }
 
@@ -340,40 +343,46 @@ async function getSheetId(sheets, sheetName) {
     throw new Error(`Sheet with name "${sheetName}" not found`);
   } catch (error) {
     console.log(`Error getting sheet ID for ${sheetName}:`, error.message);
+    throw error;
   }
 }
 
 export async function exportResults() {
-  const results = JSON.parse(fs.readFileSync(resultsPath, "utf-8"));
-  const sheets = await createSheetsClient();
+  try {
+    const results = JSON.parse(fs.readFileSync(resultsPath, "utf-8"));
+    const sheets = await createSheetsClient();
 
-  await setupSheets(sheets);
+    await setupSheets(sheets);
 
-  const summaryData = generatePlayerSummary(results);
-  await writeDataToSheet(sheets, tabs.summary, summaryData);
+    const summaryData = generatePlayerSummary(results);
+    await writeDataToSheet(sheets, tabs.summary, summaryData);
 
-  const headToHeadData = generateHeadToHeadMatrix(results);
-  await writeDataToSheet(sheets, tabs.h2h, headToHeadData);
-  const headToHeadSheetId = await getSheetId(sheets, tabs.h2h);
-  const colIndex = 1;
-  const coloringRequest = generateMatchColorRequest(
-    headToHeadData,
-    headToHeadSheetId,
-    colIndex
-  );
-  await applyFormatting(sheets, tabs.h2h, coloringRequest);
+    const headToHeadData = generateHeadToHeadMatrix(results);
+    await writeDataToSheet(sheets, tabs.h2h, headToHeadData);
+    const headToHeadSheetId = await getSheetId(sheets, tabs.h2h);
+    const colIndex = 1;
+    const coloringRequest = generateMatchColorRequest(
+      headToHeadData,
+      headToHeadSheetId,
+      colIndex
+    );
+    await applyFormatting(sheets, tabs.h2h, coloringRequest);
 
-  const playerMatchesData = generatePlayerMatches(results);
-  await writeDataToSheet(sheets, tabs.playerMatches, playerMatchesData);
-  const playerMatchesSheetId = await getSheetId(sheets, tabs.playerMatches);
-  const columnIndex = 0;
-  const matchesColoringRequest = generateMatchColorRequest(
-    playerMatchesData,
-    playerMatchesSheetId,
-    columnIndex
-  );
-  await applyFormatting(sheets, tabs.playerMatches, matchesColoringRequest);
+    const playerMatchesData = generatePlayerMatches(results);
+    await writeDataToSheet(sheets, tabs.playerMatches, playerMatchesData);
+    const playerMatchesSheetId = await getSheetId(sheets, tabs.playerMatches);
+    const columnIndex = 0;
+    const matchesColoringRequest = generateMatchColorRequest(
+      playerMatchesData,
+      playerMatchesSheetId,
+      columnIndex
+    );
+    await applyFormatting(sheets, tabs.playerMatches, matchesColoringRequest);
 
-  const placementData = getPlacementData(results);
-  await writeDataToSheet(sheets, tabs.placements, placementData);
+    const placementData = getPlacementData(results);
+    await writeDataToSheet(sheets, tabs.placements, placementData);
+  } catch (error) {
+    console.log("Error exporting results", error.message);
+    throw error;
+  }
 }

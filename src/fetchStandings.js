@@ -44,55 +44,70 @@ async function fetchAllStandingsForEvent(id, perPage, totalEntrants) {
   let page = 1;
   const totalPages = Math.ceil(totalEntrants / perPage);
 
-  // Fetch all standings for a single event, including the total entrants of that event
-  do {
-    const response = await fetch("https://api.start.gg/gql/alpha", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${key}`,
-      },
-      body: JSON.stringify({
-        query,
-        variables: { eventId: id, page, perPage },
-      }),
-    });
+  try {
+    // Fetch all standings for a single event, including the total entrants of that event
+    do {
+      const response = await fetch("https://api.start.gg/gql/alpha", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${key}`,
+        },
+        body: JSON.stringify({
+          query,
+          variables: { eventId: id, page, perPage },
+        }),
+      });
 
-    await delay(REQUEST_DELAY);
+      await delay(REQUEST_DELAY);
 
-    const data = await response.json();
-    const { standings } = data.data.event;
-    allStandings.push(...standings.nodes);
+      const data = await response.json();
+      const { standings } = data.data.event;
+      allStandings.push(...standings.nodes);
 
-    page++;
-  } while (page <= totalPages);
-
+      page++;
+    } while (page <= totalPages);
+  } catch (error) {
+    console.log(
+      `Error fetching standings for event with ID: ${id}, check eventData.json`,
+      error.message
+    );
+    throw error;
+  }
   return { totalEntrants, standings: allStandings };
 }
 
 export async function fetchStandings() {
-  const eventData = JSON.parse(fs.readFileSync(eventPath, "utf-8"));
-  const eventIds = eventData.map((event) => event.id);
-  const tournamentNames = eventData.map((event) => event.tournament);
-  const tournamentEntrants = eventData.map((event) => event.entrants);
-  const eventNames = eventData.map((event) => event.event);
+  try {
+    const eventData = JSON.parse(fs.readFileSync(eventPath, "utf-8"));
+    const eventIds = eventData.map((event) => event.id);
+    const tournamentNames = eventData.map((event) => event.tournament);
+    const tournamentEntrants = eventData.map((event) => event.entrants);
+    const eventNames = eventData.map((event) => event.event);
 
-  const perPage = 100;
-  let combinedPlacements = [];
-  for (let i = 0; i < eventIds.length; i++) {
-    let entrantsForTourney = tournamentEntrants[i];
-    // Fetch stats per tournament
-    const { totalEntrants, standings: allStandings } =
-      await fetchAllStandingsForEvent(eventIds[i], perPage, entrantsForTourney);
+    const perPage = 100;
+    let combinedPlacements = [];
+    for (let i = 0; i < eventIds.length; i++) {
+      let entrantsForTourney = tournamentEntrants[i];
+      // Fetch stats per tournament
+      const { totalEntrants, standings: allStandings } =
+        await fetchAllStandingsForEvent(
+          eventIds[i],
+          perPage,
+          entrantsForTourney
+        );
 
-    combinedPlacements.push({
-      tournament: tournamentNames[i],
-      event: eventNames[i],
-      eventId: eventIds[i],
-      totalEntrants,
-      standings: allStandings,
-    });
-     await delay(REQUEST_DELAY);
+      combinedPlacements.push({
+        tournament: tournamentNames[i],
+        event: eventNames[i],
+        eventId: eventIds[i],
+        totalEntrants,
+        standings: allStandings,
+      });
+      await delay(REQUEST_DELAY);
+    }
+    fs.writeFileSync(outputPath, JSON.stringify(combinedPlacements, null, 2));
+  } catch (error) {
+    console.log("Fatal error fetching standings:", error.message);
   }
-  fs.writeFileSync(outputPath, JSON.stringify(combinedPlacements, null, 2));
 }

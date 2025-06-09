@@ -65,7 +65,8 @@ function isValidSlot(slot) {
     slot.entrant &&
     slot.entrant.participants &&
     slot.entrant.participants.length > 0 &&
-    slot.entrant.participants[0].user
+    slot.entrant.participants[0].user &&
+    slot.entrant.participants[0].user.id
   );
 }
 
@@ -121,11 +122,12 @@ function finalizeStats(userData) {
 }
 
 export function processSets() {
+  try {
   const trackedPlayers = JSON.parse(fs.readFileSync(playersPath, "utf-8"));
   const rawSets = JSON.parse(fs.readFileSync(rawSetsPath, "utf-8"));
   const standings = JSON.parse(fs.readFileSync(standingsPath, "utf-8"));
 
-  // Use flapmap to extract just sets and just slots from the raw data
+  // Use flatmap to extract just sets and just slots from the raw data
   const allSets = rawSets.tournaments.flatMap((tournament) => tournament.sets);
   const allSlots = allSets.flatMap((set) => set.slots);
 
@@ -145,7 +147,7 @@ export function processSets() {
   const trackedPlayerMap = getUserIds(trackedPlayers, allSlots);
   const userData = {};
 
-  // Initalize userData object for all tracked players
+  // Initialize userData object for all tracked players
   for (const [userId, gamerTag] of trackedPlayerMap) {
     userData[gamerTag] = {
       userId,
@@ -170,13 +172,12 @@ export function processSets() {
   for (const set of allSets) {
     const [slotOne, slotTwo] = set.slots;
 
-    const entrantId1 = slotOne.entrant.id;
-    const entrantId2 = slotTwo.entrant.id;
-
     if (!isValidSlot(slotOne) || !isValidSlot(slotTwo)) {
       continue;
     }
 
+    const entrantId1 = slotOne.entrant.id;
+    const entrantId2 = slotTwo.entrant.id;
 
     // Extract userIds from created map
     const userId1 = entrantIdToUserId.get(entrantId1);
@@ -248,4 +249,8 @@ export function processSets() {
   console.log(
     `Successfully processed all sets from ${trackedPlayerMap.size} users into results.json.`
   );
+} catch (error) {
+  console.log("Error processing sets:" , error.message);
+  throw error;
+}
 }
