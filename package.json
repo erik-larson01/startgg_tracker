@@ -1,15 +1,22 @@
 {
   "name": "startgg_tracker",
   "version": "1.0.0",
+  "bin": {
+    "startgg-tracker": "./startgg-tracker.js"
+  },
   "type": "module",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Erik Larson",
   "license": "ISC",
   "description": "Tournament scraper and data compiler for StartGG",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erik-larson01/startgg_tracker"
+  },
   "dependencies": {
     "cli-progress": "^3.12.0",
     "commander": "^14.0.0",
