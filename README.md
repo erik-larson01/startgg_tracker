@@ -7,6 +7,15 @@ A powerful command-line tool for tracking players and tournaments on start.gg. A
 
 Perfect for tournament organizers, members of local and statewide PR panels, and competitive gaming communities who need automated tracking and professional reporting capabilities.
 
+## Motivation
+I initially got the idea for this project from one of my friends at UW-Madison, who also was an officer for the SSBU club there. He mentioned how long generating a PR (power rankings) would take as he would have to manually input match data per player in the club. 
+
+This inspired me to explore how I could help automate the process. After learning that Start.gg offered an API, I began planning a tool that could fetch relevant data automatically. At first, my goal was just to export the data into a JSON file, as this was my first time working with GraphQL and APIs, and I wanted to focus on getting the data right.
+
+As the project evolved, I decided to make it more user-friendly by integrating the Google Sheets API. This allowed me to present the tournament stats in a clean, organized, and familiar format, making it easier for ranking panelists and TOs to review, filter, and analyze results. I also decided to use commander.js to absract the code away and allow a user to run the program solely through a command line. This project was certainly fulfilling and I am glad it is planned to be used at other universities outside of UW as well!
+
+
+
 ## Features
 -   Tournament Management: Add and track dozens of tournaments with ease
 -   Player Tracking: Monitor specific players across all tracked tournaments
