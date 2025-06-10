@@ -3,8 +3,16 @@ import path from "path";
 import { createSheetsClient } from "./googleAuth.js";
 const resultsPath = path.join(process.cwd(), "data", "results.json");
 
-// Replace your spreadsheet ID here
-const spreadsheetId = "14wOo7qILx2vCEFppgt-1FHYd-8-E0gSvc6a6HR4vDDY";
+function getSpreadsheetId() {
+  const spreadsheetPath = "config/spreadsheetId.txt";
+
+  if (!fs.existsSync(spreadsheetPath)) {
+    console.error("Spreadsheet ID file not found. Please run `set spreadsheet <id>` first.");
+    process.exit(1);
+  }
+
+  return fs.readFileSync(spreadsheetPath, "utf-8").trim();
+}
 
 const tabs = {
   summary: "Player Summary",
@@ -240,7 +248,7 @@ async function setupSheets(sheets) {
   // Create sheets and update their names
   try {
     const spreadsheet = await sheets.spreadsheets.get({
-      spreadsheetId: spreadsheetId,
+      spreadsheetId: getSpreadsheetId(),
     });
 
     const existingSheets = spreadsheet.data.sheets;
@@ -282,7 +290,7 @@ async function setupSheets(sheets) {
     // Update the spreadsheet
     if (requests.length > 0) {
       await sheets.spreadsheets.batchUpdate({
-        spreadsheetId: spreadsheetId,
+        spreadsheetId: getSpreadsheetId(),
         resource: { requests },
       });
     }
@@ -297,10 +305,10 @@ async function setupSheets(sheets) {
 async function applyFormatting(sheets, sheetName, requests) {
   try {
     await sheets.spreadsheets.batchUpdate({
-      spreadsheetId: spreadsheetId,
+      spreadsheetId: getSpreadsheetId(),
       resource: { requests },
     });
-    console.log(`Match coloring applied to ${sheetName}`);
+    console.log(`Match coloring applied to ${sheetName}\n`);
   } catch (error) {
     console.log(`Error adding color to ${sheetName}`, error.message);
     throw error;
@@ -311,14 +319,14 @@ async function writeDataToSheet(sheets, sheetName, data) {
   // Write raw data in cell A1
   try {
     await sheets.spreadsheets.values.update({
-      spreadsheetId: spreadsheetId,
+      spreadsheetId: getSpreadsheetId(),
       range: `${sheetName}!A1`,
       valueInputOption: "RAW",
       resource: {
         values: data,
       },
     });
-    console.log(`Data written to ${sheetName} sheet`);
+    console.log(`Data written to ${sheetName} sheet\n`);
   } catch (error) {
     console.log(`Error writing data to ${sheetName}`, error.message);
     throw error;
@@ -329,7 +337,7 @@ async function writeDataToSheet(sheets, sheetName, data) {
 async function getSheetId(sheets, sheetName) {
   try {
     const spreadsheet = await sheets.spreadsheets.get({
-      spreadsheetId: spreadsheetId,
+      spreadsheetId: getSpreadsheetId(),
     });
 
     const existingSheets = spreadsheet.data.sheets;

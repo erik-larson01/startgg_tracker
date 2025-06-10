@@ -16,7 +16,7 @@ async function getAuthClient() {
     });
 
     const client = await auth.getClient();
-    console.log("Google Auth client authenticated successfully");
+    console.log("Google Auth client authenticated successfully\n");
 
     return client;
   } catch (error) {
@@ -30,7 +30,7 @@ export async function createSheetsClient() {
     const authClient = await getAuthClient();
     // Create a specific Google sheets client
     const sheets = google.sheets({ version: "v4", auth: authClient });
-    console.log("Google Sheets client created successfully");
+    console.log("Google Sheets client created successfully\n");
     return sheets;
   } catch (error) {
     console.log("Error creating Google Sheets client:", error.message);
