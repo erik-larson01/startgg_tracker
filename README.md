@@ -167,7 +167,7 @@ The tool uses and creates the following directory structure:
 6.  Set Spreadsheet ID
     -   Obtain the spreadsheet ID from the URL (after /d/ and before /edit)
     ```bash
-    startgg-tracker set spreadsheet "your-spreadsheet-id-from-url"
+    startgg-tracker set-spreadsheet "your-spreadsheet-id-from-url"
     ```
 
 ### Usage
