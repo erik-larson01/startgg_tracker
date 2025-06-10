@@ -182,12 +182,12 @@ startgg-tracker export
 
 The exported Google Sheets file will have multiple tabs representing different views of your tournament data:
 
-| Tab Name | Description |
-| --- | --- | --- |
-| **Player Summary** | List of tracked players and their overall stats |
+| Tab Name         | Description                                              |
+|------------------|----------------------------------------------------------|
+| **Player Summary** | List of tracked players and their overall stats         |
 | **Player Matches** | Compilation of all sets each player played across tournaments |
-| **Head-to-Head** | Player vs Player H2H matchup records |
-| **Standings** | Tournament standings per player |
+| **Head-to-Head**   | Player vs Player H2H matchup records                    |
+| **Standings**      | Tournament standings per player                         |
 
 You can also view the results in a text format via results.json.
 
