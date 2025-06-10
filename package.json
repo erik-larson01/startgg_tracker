@@ -11,7 +11,7 @@
   },
   "keywords": [],
   "author": "Erik Larson",
-  "license": "ISC",
+  "license": "MIT",
   "description": "Tournament scraper and data compiler for StartGG",
   "repository": {
     "type": "git",
