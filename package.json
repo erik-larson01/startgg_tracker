@@ -5,10 +5,7 @@
     "startgg-tracker": "./startgg-tracker.js"
   },
   "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
+  "main": "startgg-tracker.js",
   "keywords": [],
   "author": "Erik Larson",
   "license": "MIT",
