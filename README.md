@@ -189,9 +189,16 @@ The exported Google Sheets file will have multiple tabs representing different v
 | **Head-to-Head** | Player vs Player H2H matchup records |
 | **Standings** | Tournament standings per player |
 
+You can also view the results in a text format via results.json.
+
 ### Running the CLI
 
 Here's what running the tool looks like in your terminal:
+![CLI Output Example](./images/startgg-run.png)
+
+After export, here's what two example tabs look like:
+![Player Summary Example](./images/summary.png)
+![H2H Example](./images/h2h.png)
 
 ## Development
 
