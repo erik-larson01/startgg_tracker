@@ -2,8 +2,10 @@ node_modules/
 .env
 config/players.json
 config/tournaments.json
+config/spreadsheetId.txt
 /data/rawSets.json
 /data/results.json
 /data/eventData.json
 /data/standings.json
 credentials.json
+.DS_Score
