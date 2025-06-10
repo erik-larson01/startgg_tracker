@@ -1,26 +1,21 @@
 # Start.gg Tournament Tracker
-===========================
 
-![License](https://img.shields.io/github/license/erik-larson01/startgg-tracker)
-![Last Commit](https://img.shields.io/github/last-commit/erik-larson01/startgg-tracker/main)
-![Node.js](https://img.shields.io/node/v/startgg-tracker)
+![License](https://img.shields.io/github/license/erik-larson01/startgg_tracker)
+![Last Commit](https://img.shields.io/github/last-commit/erik-larson01/startgg_tracker/main)
 
 A powerful command-line tool for tracking players and tournaments on start.gg. Automatically fetch, process, and export tournament data including player sets, standings, and event results with seamless Google Sheets integration.
 
-Perfect for tournament organizers, esports analysts, and competitive gaming communities who need automated tracking and professional reporting capabilities.
+Perfect for tournament organizers, members of local and statewide PR panels, and competitive gaming communities who need automated tracking and professional reporting capabilities.
 
 ## Features
---------
-
--   Tournament Management: Add and track multiple tournaments with ease
+-   Tournament Management: Add and track dozens of tournaments with ease
 -   Player Tracking: Monitor specific players across all tracked tournaments
 -   Data Processing: Automatically fetch and process comprehensive tournament data
 -   Google Sheets Export: Seamlessly export results to Google Sheets for analysis
--   CLI Interface: Intuitive command-line interface for efficient management
+-   CLI Interface: Intuitive command-line interface for efficient use
 -   Modular Architecture: Extensible codebase for custom features and integrations
 
 ## Table of Contents
------------------
 - [Installation](#installation)
 - [Quick Start](#quick-start)
 - [Commands Reference](#commands-reference)
@@ -32,20 +27,19 @@ Perfect for tournament organizers, esports analysts, and competitive gaming comm
 - [Roadmap](#roadmap)
 
 ## Installation
-------------
 
 ### Prerequisites
 
 -   Node.js 16.0.0 or higher
 -   npm or package manager
--   Start.gg API key (required - obtain from [start.gg developer settings](https://developer.start.gg/))
+-   Start.gg API key (required - obtain from [start.gg developer settings](https://developer.start.gg/docs/authentication))
 
 ### Setup
 
 1.  Clone the repository
 
     ```bash
-    git clone https://github.com/yourusername/startgg-tracker.git
+    git clone https://github.com/erik-larson01/startgg-tracker.git
     cd startgg-tracker
     ```
 
@@ -61,27 +55,26 @@ Perfect for tournament organizers, esports analysts, and competitive gaming comm
     startgg-tracker set-api-key "your-api-key-here"
     ```
 
-4. Run the CLI
-You can run commands either by:
+4.  Install globally (optional)
 
-```bash
-node startgg-tracker.js <command>
-```
+    ```bash
+    npm link
+    ```
 
-or, after installing globally:
+5. Run the CLI
 
-```bash
-startgg-tracker <command>
-```
+    You can run commands either by:
+    ```bash
+    node startgg-tracker.js <command>
+    ```
 
-5.  Install globally (optional)
+    or, after installing globally:
 
-```bash
-npm link
-```
+    ```bash
+    startgg-tracker <command>
+    ```
 
 ## Quick Start
------------
 
 1.  Initialize the project
 
@@ -111,11 +104,11 @@ npm link
 5.  Export to Google Sheets (recommended)
 
     ```bash
+    # Run after Google Sheets setup (view Google Sheets integration below)
     startgg-tracker export
     ```
 
 ### Commands Reference
-------------------
 
 | Command | Description | Example |
 | --- | --- | --- |
@@ -130,9 +123,9 @@ npm link
 | `set-api-key <key>` | Set or update Start.gg API key in .env file | `startgg-tracker set-api-key "your-api-key"` |
 | `run` | Fetch and process tournament data | `startgg-tracker run` |
 | `export` | Export processed data to Google Sheets | `startgg-tracker export` |
+| `--help` or `-h` | Display help for all commands | `startgg-tracker --help` |
 
 ## Configuration
--------------
 
 The tool uses and creates the following directory structure:
 
@@ -149,18 +142,16 @@ The tool uses and creates the following directory structure:
     -   Contains the core functionality modules for fetching and processing data
 -   `.env` - Environment variables file containing your Start.gg API key
 
-Important: Use CLI commands to modify configuration. Manual file editing may cause errors.
-
 ## Google Sheets Integration
--------------------------
 
 ### Setup Instructions
 
 1.  Create Google Cloud Project
     -   Visit [Google Cloud Console](https://console.cloud.google.com/)
+    -   Go to the navigation menu → "IAM & Admin" → "Create a Project"
     -   Create a new project or select existing one
 2.  Enable Google Sheets API
-    -   Navigate to "APIs & Services" → "Library"
+    -   Navigate to "APIs & Services" → "API Library"
     -   Search and enable "Google Sheets API"
 3.  Create Service Account
     -   Go to "APIs & Services" → "Credentials"
@@ -175,7 +166,7 @@ Important: Use CLI commands to modify configuration. Manual file editing may cau
     -   Share with service account email (found in `credentials.json`)
     -   Grant "Editor" permissions
 6.  Set Spreadsheet ID
-
+    -   Obtain the spreadsheet ID from the URL (after /d/ and before /edit)
     ```bash
     startgg-tracker set spreadsheet "your-spreadsheet-id-from-url"
     ```
@@ -191,7 +182,6 @@ startgg-tracker export
 ```
 
 ## Development
------------
 
 ### Tech Stack
 
@@ -236,29 +226,19 @@ startgg-tracker/
 ```
 
 ## Contributing
-------------
 
-We welcome contributions! Here's how you can help:
+I welcome contributions! Here's how you can help:
 
 1.  Report Issues: Use GitHub Issues for bugs and feature requests
 2.  Submit Pull Requests: Fork, create feature branch, and submit PR
 3.  Suggest Features: Share ideas for new functionality
 4.  Improve Documentation: Help make the docs better
 
-### Development Guidelines
-
--   Follow existing code style and conventions
--   Add tests for new features when possible
--   Update documentation for significant changes
--   Use clear, descriptive commit messages
-
 ## License
--------
 
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE.txt) file for details.
 
 ## Roadmap
--------
 
 ### Planned Features
 
@@ -270,16 +250,16 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE.tx
 
 ### Community Requests
 
-Have an idea? [Open an issue](https://github.com/erik-larson01/startgg-tracker/issues) and let us know!
+Have an idea? [Open an issue](https://github.com/erik-larson01/startgg_tracker/issues) and let me know!
 
 ## Support
--------
 
--   Issues: [GitHub Issues](https://github.com/erik-larson01/startgg-tracker/issues)
+
+-   Issues: [GitHub Issues](https://github.com/erik-larson01/startgg_tracker/issues)
 -   Contact: <emlarson23@wisc.edu>
 
 * * * * *
 
 Made with ❤️ for the competitive gaming community
 
-[⭐ Star this repository](https://github.com/erik-larson01/startgg-tracker) if you find it useful!
+[⭐ Star this repository](https://github.com/erik-larson01/startgg_tracker) if you find it useful!
