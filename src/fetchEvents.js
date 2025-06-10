@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import cliProgress from "cli-progress";
 import { config } from "dotenv";
 config();
 
@@ -55,6 +56,21 @@ export async function fetchEvents() {
   try {
     const allEvents = [];
     const tournamentData = JSON.parse(fs.readFileSync(tournamentPath, "utf-8"));
+
+    const progressBar = new cliProgress.SingleBar(
+      {
+        format:
+          "Fetching Events |{bar}| {percentage}% || {value}/{total} Events",
+        barCompleteChar: "\u2588",
+        barIncompleteChar: "\u2591",
+        hideCursor: true,
+        clearOnComplete: true,
+      },
+      cliProgress.Presets.shades_classic
+    );
+
+    progressBar.start(tournamentData.length, 0);
+
     for (const tournament of tournamentData) {
       // Create each slug using tournament details only
       const slug = tournament.substring("https://www.start.gg/".length);
@@ -70,7 +86,9 @@ export async function fetchEvents() {
       } else {
         console.log(`No event found for slug: ${slug}`);
       }
+      progressBar.increment();
     }
+    progressBar.stop();
     fs.writeFileSync(eventIdPath, JSON.stringify(allEvents, null, 2));
     console.log(`Successfully fetched data for ${allEvents.length} events.`);
   } catch (error) {

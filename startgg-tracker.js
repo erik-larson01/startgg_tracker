@@ -68,7 +68,7 @@ program
   });
 
 program
-  .command("add player <gamerTag>")
+  .command("add-player <gamerTag>")
   .description(
     "Adds a player to track, using their startGG username without their sponsor"
   )
@@ -95,7 +95,7 @@ program
   });
 
 program
-  .command("add tournament <url>")
+  .command("add-tournament <url>")
   .description(
     "Adds a tournament URL, which should be a startGG link ending in the event name, such as .../ultimate-singles"
   )
@@ -118,7 +118,7 @@ program
   });
 
 program
-  .command("view players")
+  .command("view-players")
   .description("Lists tracked players")
   .action(() => {
     if (!fs.existsSync(playersPath)) {
@@ -137,7 +137,7 @@ program
   });
 
 program
-  .command("view tournaments")
+  .command("view-tournaments")
   .description("Lists tournament URLs")
   .action(() => {
     if (!fs.existsSync(tournamentsPath)) {
@@ -156,7 +156,7 @@ program
   });
 
 program
-  .command("delete player <gamerTag>")
+  .command("delete-player <gamerTag>")
   .description("Removes a player from the tracked player list")
   .action((gamerTag) => {
     if (!fs.existsSync(playersPath)) {
@@ -176,7 +176,7 @@ program
   });
 
 program
-  .command("delete tournament <urlOrIndex>")
+  .command("delete-tournament <urlOrIndex>")
   .description("Removes a tournament (by URL or index)")
   .action((urlOrIndex) => {
     if (!fs.existsSync(tournamentsPath)) {
@@ -220,7 +220,7 @@ program
   });
 
 program
-  .command("set spreadsheet <spreadsheetId>")
+  .command("set-spreadsheet <spreadsheetId>")
   .description(
     "Set the Google Sheets spreadsheet ID for export (must be done before export)"
   )

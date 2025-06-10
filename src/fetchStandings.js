@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import cliProgress from "cli-progress";
 import { config } from "dotenv";
 config();
 
@@ -39,7 +40,13 @@ const query = `query EventStandings($eventId: ID!, $page: Int!, $perPage: Int!) 
   }
 }`;
 
-async function fetchAllStandingsForEvent(id, perPage, totalEntrants) {
+async function fetchAllStandingsForEvent(
+  id,
+  perPage,
+  totalEntrants,
+  label,
+  progressBar
+) {
   let allStandings = [];
   let page = 1;
   const totalPages = Math.ceil(totalEntrants / perPage);
@@ -66,6 +73,13 @@ async function fetchAllStandingsForEvent(id, perPage, totalEntrants) {
       allStandings.push(...standings.nodes);
 
       page++;
+
+      const nodesCount = standings.nodes.length;
+      allStandings.push(...standings.nodes);
+
+      if (progressBar) {
+        progressBar.increment(nodesCount, { tournament: label });
+      }
     } while (page <= totalPages);
   } catch (error) {
     console.log(
@@ -84,17 +98,38 @@ export async function fetchStandings() {
     const tournamentNames = eventData.map((event) => event.tournament);
     const tournamentEntrants = eventData.map((event) => event.entrants);
     const eventNames = eventData.map((event) => event.event);
-
     const perPage = 100;
+    const totalEntrantsAll = tournamentEntrants.reduce(
+      (sum, curr) => sum + curr,
+      0
+    );
+
+    const progressBar = new cliProgress.SingleBar(
+      {
+        format:
+          "Fetching Standings |{bar}| {percentage}% || {value}/{total} Entrants || {tournament}",
+        barCompleteChar: "\u2588",
+        barIncompleteChar: "\u2591",
+        hideCursor: true,
+        clearOnComplete: true,
+      },
+      cliProgress.Presets.shades_classic
+    );
+
+    progressBar.start(totalEntrantsAll, 0);
     let combinedPlacements = [];
+
     for (let i = 0; i < eventIds.length; i++) {
       let entrantsForTourney = tournamentEntrants[i];
+      const label = `${tournamentNames[i]} / ${eventNames[i]}`;
       // Fetch stats per tournament
       const { totalEntrants, standings: allStandings } =
         await fetchAllStandingsForEvent(
           eventIds[i],
           perPage,
-          entrantsForTourney
+          entrantsForTourney,
+          label,
+          progressBar
         );
 
       combinedPlacements.push({
@@ -106,7 +141,10 @@ export async function fetchStandings() {
       });
       await delay(REQUEST_DELAY);
     }
+    progressBar.stop();
+
     fs.writeFileSync(outputPath, JSON.stringify(combinedPlacements, null, 2));
+    console.log(`Successfully fetched data for ${totalEntrantsAll} entrants.`);
   } catch (error) {
     console.log("Fatal error fetching standings:", error.message);
   }

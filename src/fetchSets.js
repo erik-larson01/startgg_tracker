@@ -140,7 +140,7 @@ export async function fetchSets() {
       barCompleteChar: "\u2588",
       barIncompleteChar: "\u2591",
       hideCursor: true,
-      clearOnComplete: false,
+      clearOnComplete: true,
       stopOnComplete: true,
     },
     cliProgress.Presets.shades_classic
@@ -172,8 +172,7 @@ export async function fetchSets() {
   }
 
   progressBar.stop();
-  console.log();
-  console.log(`All sets successfully fetched and saved to rawSets.json`);
+  console.log(`${totalSetsAcrossAll} sets successfully fetched and saved to rawSets.json`);
 
   // Append totalSetsAcross all tournaments for easier JSON viewing
   const finalOutput = {

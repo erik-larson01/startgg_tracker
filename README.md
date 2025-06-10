@@ -48,17 +48,16 @@ Perfect for tournament organizers, members of local and statewide PR panels, and
     ```bash
     npm install
     ```
-
-3.  Set up your Start.gg API key
-
-    ```bash
-    startgg-tracker set-api-key "your-api-key-here"
-    ```
-
-4.  Install globally (optional)
+3.  Install globally (allows startgg-tacker <command> rather than node startgg-tracker.js <command>)
 
     ```bash
     npm link
+    ```
+
+4.  Set up your Start.gg API key
+
+    ```bash
+    startgg-tracker set-api-key "your-api-key-here"
     ```
 
 5. Run the CLI
@@ -113,13 +112,13 @@ Perfect for tournament organizers, members of local and statewide PR panels, and
 | Command | Description | Example |
 | --- | --- | --- |
 | `init` | Initialize configuration files | `startgg-tracker init` |
-| `add player <gamerTag>` | Add a player to tracking list | `startgg-tracker add player "Mang0"` |
-| `delete player <gamerTag>` | Remove a tracked player | `startgg-tracker delete player "Mang0"` |
-| `view players` | Display all tracked players | `startgg-tracker view players` |
-| `add tournament <url>` | Add tournament URL to tracking | `startgg-tracker add tournament "https://start.gg/.../event-name"` |
-| `delete tournament <urlOrIndex>` | Remove tournament by URL or index | `startgg-tracker delete tournament 1` |
-| `view tournaments` | List all tracked tournaments | `startgg-tracker view tournaments` |
-| `set spreadsheet <id>` | Configure Google Sheets integration | `startgg-tracker set spreadsheet "1A2B3C..."` |
+| `add-player <gamerTag>` | Add a player to tracking list | `startgg-tracker add-player "Mang0"` |
+| `delete-player <gamerTag>` | Remove a tracked player | `startgg-tracker delete-player "Mang0"` |
+| `view-players` | Display all tracked players | `startgg-tracker view-players` |
+| `add-tournament <url>` | Add tournament URL to tracking | `startgg-tracker add-tournament "https://start.gg/.../event-name"` |
+| `delete-tournament <urlOrIndex>` | Remove tournament by URL or index | `startgg-tracker delete-tournament 1` |
+| `view-tournaments` | List all tracked tournaments | `startgg-tracker view-tournaments` |
+| `set-spreadsheet <id>` | Configure Google Sheets integration | `startgg-tracker set-spreadsheet "1A2B3C..."` |
 | `set-api-key <key>` | Set or update Start.gg API key in .env file | `startgg-tracker set-api-key "your-api-key"` |
 | `run` | Fetch and process tournament data | `startgg-tracker run` |
 | `export` | Export processed data to Google Sheets | `startgg-tracker export` |
@@ -180,6 +179,19 @@ After configuration, export data with:
 startgg-tracker run 
 startgg-tracker export
 ```
+
+The exported Google Sheets file will have multiple tabs representing different views of your tournament data:
+
+| Tab Name | Description |
+| --- | --- | --- |
+| **Player Summary** | List of tracked players and their overall stats |
+| **Player Matches** | Compilation of all sets each player played across tournaments |
+| **Head-to-Head** | Player vs Player H2H matchup records |
+| **Standings** | Tournament standings per player |
+
+### Running the CLI
+
+Here's what running the tool looks like in your terminal:
 
 ## Development
 
