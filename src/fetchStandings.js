@@ -75,7 +75,6 @@ async function fetchAllStandingsForEvent(
       page++;
 
       const nodesCount = standings.nodes.length;
-      allStandings.push(...standings.nodes);
 
       if (progressBar) {
         progressBar.increment(nodesCount, { tournament: label });
