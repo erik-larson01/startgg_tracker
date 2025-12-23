@@ -84,7 +84,7 @@ export async function fetchEvents() {
           slug: slug,
         });
       } else {
-        console.log(`No event found for slug: ${slug}`);
+        console.log(`\nNo event found for slug: ${slug}`);
       }
       progressBar.increment();
     }
