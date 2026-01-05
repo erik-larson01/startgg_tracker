@@ -8,4 +8,4 @@ config/spreadsheetId.txt
 /data/eventData.json
 /data/standings.json
 credentials.json
-.DS_Score
+.DS_Store
