@@ -147,6 +147,7 @@ function generatePlayerSummary(results) {
   const players = getAllTrackedPlayers(results);
   const headers = [
     "Player Name",
+    "PR Eligible?",
     "Total Sets",
     "Wins",
     "Losses",
@@ -170,6 +171,7 @@ function generatePlayerSummary(results) {
     const player = results[playerName];
     const row = [
       playerName,
+      player.isEligible,
       player.totalSets,
       player.wins,
       player.losses,

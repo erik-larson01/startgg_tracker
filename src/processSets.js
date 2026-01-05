@@ -80,6 +80,21 @@ function finalizeStats(userData) {
       player.winRate = +(player.wins / player.totalSets).toFixed(2);
     }
 
+    // Create an array of all tournament names to track eligibility
+    const tourneyNames = player.placements.map(placement => placement.tournament);
+
+    // Eligible Tournaments for PR attendance requirement
+    const tourneyKeywords = ["Badger Brawls", "Between 2 Lakes", "The Guild"];
+
+    // Keep tournaments that are in tourneyKeywords (eligible tournaments)
+    const eligibleTourneys = tourneyNames.filter(name =>
+      tourneyKeywords.some(keyword => name.includes(keyword))
+    );
+
+    // Update eligibility based on # of eligible tournaments attended
+    player.isEligible = eligibleTourneys.length >= 3 ? "Yes" : "No";
+
+    // Create an array of all placements per user 
     const placements = player.placements.map((placement) => {
       const numerator = Number(placement.placement.split("/")[0].trim());
       return numerator;
@@ -95,8 +110,8 @@ function finalizeStats(userData) {
         top8Count++;
       }
     }
-
     player.top8Count = top8Count;
+
     if (placements.size != 0) {
       const totalPlacements = placements.reduce((sum, placement) => sum + placement, 0);
       player.avgPlacement = Number((totalPlacements / player.eventsAttended).toFixed(2));
@@ -106,7 +121,7 @@ function finalizeStats(userData) {
       neg = 0,
       even = 0;
 
-      // Update head to head record based on wins vs losses
+    // Update head to head record based on wins vs losses
     for (const opponent in headToHead) {
       const record = headToHead[opponent];
       if (record.wins > record.losses) pos++;
@@ -151,6 +166,7 @@ export function processSets() {
   for (const [userId, gamerTag] of trackedPlayerMap) {
     userData[gamerTag] = {
       userId,
+      isEligible: "No",
       totalSets: 0,
       wins: 0,
       losses: 0,
