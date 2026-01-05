@@ -25,6 +25,7 @@ const query = `query EventSets($eventId: ID!, $page: Int!, $perPage: Int!) {
         total
       }
       nodes {
+        displayScore
         id
         winnerId
         slots {

@@ -195,6 +195,9 @@ export function processSets() {
     // If no players are tracked, move to next set
     if (!userData[tag1] && !userData[tag2]) continue;
 
+    // If the score was a DQ, move to the next set
+    const setScore = set.displayScore;
+    if (setScore == "DQ") continue;
 
     // Update results for tracked player if in slot 1
     if (userData[tag1]) {
